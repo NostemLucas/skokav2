@@ -1,0 +1,87 @@
+# Node / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json     # opcional: comentar si quieres hacer commit del lockfile
+.lock-wscript
+
+# Next / Build outputs
+.next/
+out/
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+.astro/
+public/build/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+.secret
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Python (por si corres scripts en venv/WSL)
+venv/
+venv*/
+.envrc
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.pyo
+.python-version
+
+# Selenium / webdriver manager
+.wdm/
+.chromedriver/
+chromedriver/
+geckodriver/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# CI / telemetry / caches
+.cache/
+coverage/
+coverage-report/
+.cache-loader/
+*.tgz
+
+# Misc
+*.zip
+*.tar.gz
+*.sqlite
+*.db
+.vagrant/
+.idea/*
+*.iml
+
+# If you want to save lockfiles, remove the package-lock line above.
