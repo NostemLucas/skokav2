@@ -12,10 +12,7 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: {
-    default: "Damas de compañía y escorts | Servicios de sexo en Bolivia",
-    template: "%s | Damas de Compañía Bolivia",
-  },
+  title: "Damas de compañía y escorts | Servicios de sexo en Bolivia",
   description:
     "Encuentra las mejores damas de compañía y escorts en Bolivia. Servicios discretos de sexo para todos los gustos y preferencias.",
   keywords: [
