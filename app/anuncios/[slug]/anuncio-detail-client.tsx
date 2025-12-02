@@ -32,6 +32,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [copied, setCopied] = useState<string | null>(null)
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
+  const [currentUrl, setCurrentUrl] = useState("")
 
   const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev + 1) % anuncio.fotos.length)
@@ -40,6 +41,11 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
   const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev - 1 + anuncio.fotos.length) % anuncio.fotos.length)
   }, [anuncio.fotos.length])
+
+  // Set current URL after mount to avoid hydration mismatch
+  useEffect(() => {
+    setCurrentUrl(window.location.href)
+  }, [])
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -480,7 +486,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                 </div>
                 <div className="flex gap-2">
                   <a
-                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(typeof window !== "undefined" ? window.location.href : "")}&text=${encodeURIComponent(anuncio.title)}`}
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(anuncio.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-background/50 hover:bg-background text-foreground py-2.5 px-4 rounded-xl transition-colors text-center text-sm font-semibold border border-white/10"
@@ -488,7 +494,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                     Twitter
                   </a>
                   <a
-                    href={`https://wa.me/?text=${encodeURIComponent(anuncio.title + " " + (typeof window !== "undefined" ? window.location.href : ""))}`}
+                    href={`https://wa.me/?text=${encodeURIComponent(anuncio.title + " " + currentUrl)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-primary/10 hover:bg-primary/20 text-primary py-2.5 px-4 rounded-xl transition-colors text-center text-sm font-semibold"
