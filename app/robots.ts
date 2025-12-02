@@ -4,9 +4,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/anuncios"],
-      disallow: ["/admin", "/api"],
+      allow: "/",
     },
-    sitemap: "https://skokka.com/sitemap.xml",
+    sitemap: "https://www.damasdecompañia.com.bo/sitemap.xml",
   }
 }

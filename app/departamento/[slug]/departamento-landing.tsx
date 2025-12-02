@@ -221,7 +221,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
                       {featuredAnuncios.slice(0, 3).map((anuncio) => (
                         <Link
                           key={anuncio.id}
-                          href={`/anuncios/${anuncio.id}`}
+                          href={`/anuncios/${anuncio.slug}`}
                           className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 hover:bg-muted transition-colors group border border-transparent hover:border-border"
                         >
                           <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 ring-2 ring-border">
@@ -445,7 +445,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
           {featuredAnuncios.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredAnuncios.map((anuncio) => (
-                <Link key={anuncio.id} href={`/anuncios/${anuncio.id}`} className="group block">
+                <Link key={anuncio.id} href={`/anuncios/${anuncio.slug}`} className="group block">
                   <article
                     className="bg-card rounded-2xl border border-border overflow-hidden transition-all duration-300 hover:shadow-xl shadow-sm"
                     style={{ "--hover-border": `${config.accent.hue}50` } as React.CSSProperties}
@@ -512,7 +512,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
               </h3>
               <p className="text-muted-foreground mb-6">Sé el primero en publicar un anuncio en esta ciudad</p>
               <Link
-                href="/publicar"
+                href="#"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all hover:opacity-90 shadow-md"
                 style={{ background: `linear-gradient(135deg, ${config.accent.hue}, ${config.accent.dark})` }}
               >
@@ -578,7 +578,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/publicar"
+              href="#"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all hover:scale-105 shadow-lg"
               style={{ background: `linear-gradient(135deg, ${config.accent.hue}, ${config.accent.dark})` }}
             >
@@ -586,7 +586,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/como-funciona"
+              href="/#"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-foreground bg-card border border-border transition-all hover:bg-muted shadow-sm"
             >
               Cómo funciona

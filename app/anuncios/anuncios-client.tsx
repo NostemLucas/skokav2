@@ -220,7 +220,7 @@ export default function AnunciosClientPage() {
             {paginatedAnuncios.map((anuncio) => (
               <Link
                 key={anuncio.id}
-                href={`/anuncios/${anuncio.id}`}
+                href={`/anuncios/${anuncio.slug}`}
                 className="group block"
               >
                 <article className="flex gap-4 sm:gap-6 p-4 sm:p-5 bg-card/80 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">

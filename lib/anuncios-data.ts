@@ -1,5 +1,6 @@
 export interface Anuncio {
   id: string
+  slug: string
   date: string
   link: string
   city: string
@@ -48,7 +49,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 1523
+    "vistas": 1523,
+    "slug": "blanquita-piel-de-porcelana-pezones-rosados-argentina-de-lujo"
   },
   {
     "id": "jovencita-independiente-amores-con-ambiente-propio",
@@ -71,7 +73,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 515
+    "vistas": 515,
+    "slug": "jovencita-independiente-amores-con-ambiente-propio"
   },
   {
     "id": "las-diosas-del-sexo-anal-universitarias100bs-80bste-lo-chuparemos-hasta-tus-huevitos",
@@ -98,7 +101,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "24 horas",
     "verificado": true,
-    "vistas": 358
+    "vistas": 358,
+    "slug": "las-candyslas-diosas-del-sexo-anal-universitarias-d-19-anitos100bs-80bste-lo-chuparemos-hasta-tus-hu"
   },
   {
     "id": "masaje-sensual-y-erotico",
@@ -125,7 +129,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 324
+    "vistas": 324,
+    "slug": "masaje-sensual-y-erotico"
   },
   {
     "id": "masajista-semi-madura-hermoso-rostro-lindo-cuerpo-servicio-vip-tengo-ambiente-privado-discreto",
@@ -148,7 +153,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 414
+    "vistas": 414,
+    "slug": "masajista-semi-madura-hermoso-rostro-lindo-cuerpo-servicio-vip-tengo-ambiente-privado-discreto"
   },
   {
     "id": "me-llamo-veronicacalentona",
@@ -174,7 +180,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1285
+    "vistas": 1285,
+    "slug": "me-llamo-veronicacalentona"
   },
   {
     "id": "mikaela-tu-rubia-pechugona-dispuesta-a-satisfacer-todas-tus-fantasias-sexuales-trato-de-novios-compl",
@@ -201,7 +208,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 456
+    "vistas": 456,
+    "slug": "mikaela-tu-rubia-pechugona-dispuesta-a-satisfacer-todas-tus-fantasias-sexuales-trato-de-novios-compl"
   },
   {
     "id": "n1-escoge-a-tu-mejor-cholita-cholitas-vip",
@@ -229,7 +237,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Tardes y noches",
     "verificado": true,
-    "vistas": 1103
+    "vistas": 1103,
+    "slug": "n1-fin-de-escoge-a-tu-mejor-cholita-cholitas-vip"
   },
   {
     "id": "nalgona-muy-complaciente-de-bello-rostro-ahora-ven-por-un-mananero",
@@ -253,7 +262,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 2010
+    "vistas": 2010,
+    "slug": "nalgona-muy-complaciente-de-bello-rostro-ahora-ven-por-un-mananero"
   },
   {
     "id": "nueva-18-anitos-sin-hijos",
@@ -277,7 +287,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1547
+    "vistas": 1547,
+    "slug": "nueva-18-anitos-sin-hijos"
   },
   {
     "id": "rica-beniana-exquisita-en-la-cama-te-hare-gemir-de-placer",
@@ -302,7 +313,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 793
+    "vistas": 793,
+    "slug": "rica-beniana-exquisita-en-la-cama-te-hare-gemir-de-placer"
   },
   {
     "id": "bonita-tetona-chupadita-al-natural",
@@ -329,7 +341,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 1381
+    "vistas": 1381,
+    "slug": "bonita-tetona-chupadita-al-natural"
   },
   {
     "id": "rica-flor-de-viaje",
@@ -351,7 +364,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1170
+    "vistas": 1170,
+    "slug": "rica-flor-de-viaje"
   },
   {
     "id": "sheyla-insaseable",
@@ -372,7 +386,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 258
+    "vistas": 258,
+    "slug": "sheyla-insaseable"
   },
   {
     "id": "super-baratita-cholita-quechuista-de-campito",
@@ -396,7 +411,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "24 horas",
     "verificado": true,
-    "vistas": 919
+    "vistas": 919,
+    "slug": "super-baratita-chaparenita-quechuista-de-campito"
   },
   {
     "id": "tu-amante-perfecta",
@@ -417,7 +433,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 1190
+    "vistas": 1190,
+    "slug": "tu-amante-perfecta"
   },
   {
     "id": "tu-nina-bonita-top-premiumde-18-anos-trato-de-enamorados",
@@ -442,7 +459,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1801
+    "vistas": 1801,
+    "slug": "tu-nina-bonita-top-premiumde-18-anos-trato-de-enamorados"
   },
   {
     "id": "zoe-flaquita-universitaria-iniciante",
@@ -464,7 +482,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 1307
+    "vistas": 1307,
+    "slug": "zoe-flaquita-universitaria-iniciante"
   },
   {
     "id": "candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo",
@@ -491,7 +510,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1504
+    "vistas": 1504,
+    "slug": "candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo"
   },
   {
     "id": "cholita-madura-macanuda-solterita-full-estilito",
@@ -515,7 +535,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Sábado",
     "verificado": true,
-    "vistas": 1291
+    "vistas": 1291,
+    "slug": "cholita-original-provincianita-macanuda-solterita-full-estilito"
   },
   {
     "id": "colcapirua-100-bs-nuevita-vengo-a-darte-mucho-placer-y-encuentros-unicos",
@@ -542,7 +563,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 287
+    "vistas": 287,
+    "slug": "colcapirua-100-bs-nuevita-vengo-a-darte-mucho-placer-y-encuentros-unicos"
   },
   {
     "id": "colcapirua-100bs-joven-y-apasionada",
@@ -568,7 +590,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 473
+    "vistas": 473,
+    "slug": "colcapirua-100bs-joven-y-apasionada"
   },
   {
     "id": "damita-madura-csra-bonita",
@@ -591,7 +614,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1704
+    "vistas": 1704,
+    "slug": "damita-madura-csra-bonita"
   },
   {
     "id": "devuelta-a-la-llajta-mor",
@@ -616,7 +640,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1605
+    "vistas": 1605,
+    "slug": "devuelta-a-la-llajta-mor"
   },
   {
     "id": "hermosa-cambita-rica-cola-muy-complaciente",
@@ -640,7 +665,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 172
+    "vistas": 172,
+    "slug": "hermosa-cambita-rica-cola-muy-complaciente-solo-estare-hasta-la-6-pm"
   },
   {
     "id": "100bs19-anos-sexo-vaginal-besos-carisias-al-desnudo-total",
@@ -662,7 +688,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "24 horas",
     "verificado": true,
-    "vistas": 1438
+    "vistas": 1438,
+    "slug": "19-anos-tatiana"
   },
   {
     "id": "hola-ven-y-pasamos-un-buen-momento-juntos",
@@ -682,7 +709,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1551
+    "vistas": 1551,
+    "slug": "hola-ven-y-pasamos-un-buen-momento-juntos"
   },
   {
     "id": "holi-recien-estoy-empezando-en-esto",
@@ -704,7 +732,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 1139
+    "vistas": 1139,
+    "slug": "holi-recien-estoy-empezando-en-esto"
   },
   {
     "id": "hoy-te-traigo-un-buen-contenido-no-te-lo-pierdas",
@@ -726,7 +755,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 1415
+    "vistas": 1415,
+    "slug": "hoy-te-traigo-un-buen-contenido-no-te-lo-pierdas"
   },
   {
     "id": "iniciante-20-anitos-rica-colita",
@@ -749,7 +779,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1131
+    "vistas": 1131,
+    "slug": "iniciante-20-anitos"
   },
   {
     "id": "karitoooo",
@@ -769,7 +800,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 447
+    "vistas": 447,
+    "slug": "karitoooo"
   },
   {
     "id": "lau-tu-flaquita-rica-y-apretadita-pura-dinamita-en-un-cuerpo-pequeno-listo-para-la-explosion",
@@ -799,7 +831,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 798
+    "vistas": 798,
+    "slug": "lau-tu-flaquita-rica-y-apretadita-pura-dinamita-en-un-cuerpo-pequeno-listo-para-la-explosion"
   },
   {
     "id": "llegue-de-viaje-soy-una-damita-de-piel-canela-atenta-y-muy-tierna",
@@ -821,7 +854,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 1286
+    "vistas": 1286,
+    "slug": "llegue-de-viaje-soy-una-damita-de-piel-canela-atenta-y-muy-tierna"
   },
   {
     "id": "maribel-19-anos-tu-novia-vipfoto-real",
@@ -842,7 +876,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Viernes",
     "verificado": true,
-    "vistas": 1056
+    "vistas": 1056,
+    "slug": "maribel-19-anos-tu-novia-vipfoto-real"
   },
   {
     "id": "nueva-jovencita-es-mi-primer-dia",
@@ -864,7 +899,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 180
+    "vistas": 180,
+    "slug": "flaquita-bonita-cachonda-nueva-en-el-ambiente"
   },
   {
     "id": "nuevita-vip-universitaria-lista-para-estrenar-con-pechos-grandes",
@@ -886,7 +922,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 380
+    "vistas": 380,
+    "slug": "nuevita-vip-universitaria-lista-para-estrenar-con-pechos-grandes"
   },
   {
     "id": "bella-y-hermosax-hoy250-bs-completitoanalvaginaloral69-mutuocuerpito-delgada-nalgas-carnosas-y-apete",
@@ -907,7 +944,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 565
+    "vistas": 565,
+    "slug": "aprovecha250bshoy-domingo-y-lunes-completitoanalvaginaloral69-mutuocuerpito-delgadanalgas-carnosas-y"
   },
   {
     "id": "papi-disfruta-de-todo-lo-que-te-puedo-hacer-en-la-cama-mi-cuerpo-sera-completito-para-ti",
@@ -929,7 +967,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Lunes a Sábado",
     "verificado": true,
-    "vistas": 282
+    "vistas": 282,
+    "slug": "papi-disfruta-de-todo-lo-que-te-puedo-hacer-en-la-cama-mi-cuerpo-sera-completito-para-ti"
   },
   {
     "id": "pechos-grandes-y-naturales",
@@ -952,7 +991,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Mañanas y tardes",
     "verificado": true,
-    "vistas": 979
+    "vistas": 979,
+    "slug": "pechos-grandes-y-naturales"
   },
   {
     "id": "solo-150-la-hora-yo-pago-alojamiento-salidas-contadas",
@@ -975,7 +1015,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 2005
+    "vistas": 2005,
+    "slug": "solo-150-la-hora"
   },
   {
     "id": "soy-una-senorita-linda-de-buen-cuerpo-quiero-vender-mis-videos-sin-ropita",
@@ -998,7 +1039,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Tardes y noches",
     "verificado": true,
-    "vistas": 1500
+    "vistas": 1500,
+    "slug": "soy-una-senorita-linda-de-buen-cuerpo-quiero-vender-mis-videos-sin-ropita"
   },
   {
     "id": "un-encuentro-casual-tierna-jovencita-colageno-recien-llegadita-fotos-reales-100",
@@ -1020,7 +1062,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1541
+    "vistas": 1541,
+    "slug": "un-encuentro-casual-tierna-jovencita-colageno-recien-llegadita-fotos-reales-100"
   },
   {
     "id": "ven-a-disfrutar-de-mi-bello-cuerpo-donde-me-podras-besar-y-tocar-todo-sin-restricciones-mi-amor-pack",
@@ -1042,7 +1085,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 749
+    "vistas": 749,
+    "slug": "ven-a-disfrutar-de-mi-bello-cuerpo-donde-me-podras-besar-y-tocar-todo-sin-restricciones-mi-amor-pack"
   },
   {
     "id": "cruzenita-disponible-19-anos-nalgona-trato-real-ven-difrutade-mi-rica-vagina",
@@ -1064,7 +1108,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 1375
+    "vistas": 1375,
+    "slug": "cruzenita-disponible-19-anos-nalgona-trato-real-ven-difrutade-mi-rica-vagina"
   },
   {
     "id": "delgada-bonita-de-bonito-cuerpo-de-piel-blanquita-tengo-19-anos",
@@ -1086,7 +1131,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 681
+    "vistas": 681,
+    "slug": "delgada-bonita-de-bonito-cuerpo-de-piel-blanquita-tengo-19-anos"
   },
   {
     "id": "descubre-mi-contenido-xxx-como-estudiante-de-medicina",
@@ -1109,7 +1155,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 2094
+    "vistas": 2094,
+    "slug": "descubre-mi-contenido-xxx-como-estudiante-de-medicina"
   },
   {
     "id": "eslim",
@@ -1129,7 +1176,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 1505
+    "vistas": 1505,
+    "slug": "eslim"
   },
   {
     "id": "hermosa-cholita-senorita-con-muchas-ganas-de-pasarla-bien-a-tu-lado",
@@ -1150,7 +1198,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Sábado",
     "verificado": true,
-    "vistas": 194
+    "vistas": 194,
+    "slug": "hermosa-cholita-senorita-con-muchas-ganas-de-pasarla-bien-a-tu-lado"
   },
   {
     "id": "hermosa-yunguenita-recien-llegue-amorcito-tengo-un-lindo-cuerpito-exotico",
@@ -1173,7 +1222,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Mañanas y tardes",
     "verificado": true,
-    "vistas": 1587
+    "vistas": 1587,
+    "slug": "hermosa-yunguenita-recien-llegue-amorcito-tengo-un-lindo-cuerpito-exotico"
   },
   {
     "id": "hola-amor-novia-virtual-vendiendo-mi-contenido-explicito-fotos-y-videos-personalizados-videollmada-i",
@@ -1198,7 +1248,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 1245
+    "vistas": 1245,
+    "slug": "hola-amor-novia-virtual-vendiendo-mi-contenido-explicito-fotos-y-videos-personalizados-videollmada-i"
   },
   {
     "id": "apretita-amor",
@@ -1224,7 +1275,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Lunes a Sábado",
     "verificado": true,
-    "vistas": 1008
+    "vistas": 1008,
+    "slug": "apretita-amor"
   },
   {
     "id": "hermosa-senorita-iniciando-y-con-ganas-de-aprender-de-todo-solo-contactate-conmigo",
@@ -1246,7 +1298,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 1228
+    "vistas": 1228,
+    "slug": "hermosa-senorita-iniciando-y-con-ganas-de-aprender-de-todo-solo-contactate-conmigo"
   },
   {
     "id": "hola-amor-soy-paty",
@@ -1271,7 +1324,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 881
+    "vistas": 881,
+    "slug": "hola-amor-soy-paty"
   },
   {
     "id": "jazmin-rica-jovencita-delgadita",
@@ -1300,7 +1354,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Mañanas y tardes",
     "verificado": true,
-    "vistas": 1810
+    "vistas": 1810,
+    "slug": "hermosa-ninfomana"
   },
   {
     "id": "jovencita-extranjera",
@@ -1326,7 +1381,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1570
+    "vistas": 1570,
+    "slug": "jovencita-extranjera"
   },
   {
     "id": "juguemos-a-tu-manera",
@@ -1353,7 +1409,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 790
+    "vistas": 790,
+    "slug": "juguemos-a-tu-manera"
   },
   {
     "id": "nalgona-hot-ven-a-provar-mi-rica-vagina-estrechita",
@@ -1383,7 +1440,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 385
+    "vistas": 385,
+    "slug": "hermosa-tarijena"
   },
   {
     "id": "picara-y-peligrosamente-encantadora",
@@ -1407,7 +1465,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1379
+    "vistas": 1379,
+    "slug": "picara-y-peligrosamente-encantadora"
   },
   {
     "id": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales",
@@ -1432,7 +1491,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Viernes",
     "verificado": true,
-    "vistas": 503
+    "vistas": 503,
+    "slug": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales"
   },
   {
     "id": "realizo-oral-anal-y-vaginal-tambien-tengo-contenido-hot-muy-rico-videos-y-fotos-mias-reales-xxx-chat",
@@ -1458,7 +1518,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 775
+    "vistas": 775,
+    "slug": "anal-y-vaginal-tambien-tengo-contenido-muy-rico-videos-y-fotos-mias-reales-xxx-chat-erotico-donde-ha"
   },
   {
     "id": "romantica-y-cercana",
@@ -1482,7 +1543,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 1930
+    "vistas": 1930,
+    "slug": "romantica-y-cercana"
   },
   {
     "id": "argentina-rubia-y-tatuada",
@@ -1506,7 +1568,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 414
+    "vistas": 414,
+    "slug": "argentina-rubia-y-tatuada"
   },
   {
     "id": "sabor-a-tentacion",
@@ -1530,7 +1593,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 1486
+    "vistas": 1486,
+    "slug": "sabor-a-tentacion"
   },
   {
     "id": "scarlett-tetona-blanquita",
@@ -1553,7 +1617,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 202
+    "vistas": 202,
+    "slug": "tu-puta-real-amante-perfecta-e-paseo-en-tu-ciudad"
   },
   {
     "id": "sexy-creadora-de-contenido",
@@ -1575,7 +1640,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 222
+    "vistas": 222,
+    "slug": "sexy-creadora-de-contenido"
   },
   {
     "id": "toda-la-noche-preciosas-senoritas-dispuestas-a-todo-habitaciones-de-lujo-super-comodas-obrajes-calle",
@@ -1603,7 +1669,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 2064
+    "vistas": 2064,
+    "slug": "247-preciosas-senoritas-dispuestas-a-todo-habitaciones-de-lujo-super-comodas-obrajes-calle-17"
   },
   {
     "id": "tu-manana-de-placer-iniciante-hot-con-ganas-de-que-me-hagas-el-amor",
@@ -1626,7 +1693,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1956
+    "vistas": 1956,
+    "slug": "tu-manana-de-placer-iniciante-hot-con-ganas-de-que-me-hagas-el-amor"
   },
   {
     "id": "vendo-mi-contenido-xxx-como-estudiante-de-medicina",
@@ -1647,7 +1715,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 2050
+    "vistas": 2050,
+    "slug": "vendo-mi-contenido-xxx-como-estudiante-de-medicina"
   },
   {
     "id": "bella-churca-real-con-fotos-reales-masaje-relax-69",
@@ -1672,7 +1741,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 1227
+    "vistas": 1227,
+    "slug": "bella-churca-real-e-independiente-con-espacio-propio-y-salidas-a-hotel-motel-departamento-masaje-rel"
   },
   {
     "id": "bella-scort-delgadita-y-deliciosa-pequena-pero-peligrosa",
@@ -1693,7 +1763,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 756
+    "vistas": 756,
+    "slug": "con-buena-energia-delgadita-y-deliciosa-pequena-pero-peligrosa"
   },
   {
     "id": "brasilena-alta-linda",
@@ -1716,7 +1787,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 2006
+    "vistas": 2006,
+    "slug": "brasilena-alta-linda"
   },
   {
     "id": "cambita-recien-llegadita",
@@ -1737,7 +1809,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1584
+    "vistas": 1584,
+    "slug": "cambita-recien-llegadita"
   },
   {
     "id": "cochabambina",
@@ -1760,7 +1833,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 926
+    "vistas": 926,
+    "slug": "cochabambina"
   },
   {
     "id": "descubre-el-placer-de-una-compania-inolvidable",
@@ -1783,7 +1857,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 320
+    "vistas": 320,
+    "slug": "8encuentra-momentos-de-felicidad"
   },
   {
     "id": "estrechaditasuper-caliente",
@@ -1805,7 +1880,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1795
+    "vistas": 1795,
+    "slug": "estrechaditasuper-caliente"
   },
   {
     "id": "19-anitos-disponible-para-mayores-y-jovenes",
@@ -1825,7 +1901,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 1171
+    "vistas": 1171,
+    "slug": "19-anitos-disponible-para-mayores-y-jovenes"
   },
   {
     "id": "joven-gay-pasivo-ofrese-sus-servicio-a-hombres-sin-lios-a-nada",
@@ -1849,7 +1926,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 1636
+    "vistas": 1636,
+    "slug": "joven-gay-pasivo-ofrese-sus-servicio-a-hombres-sin-lios-a-nada"
   },
   {
     "id": "kochala-ardienteven-a-domar-a-esta-zorra-servicio-completo-vip",
@@ -1874,7 +1952,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Mañanas y tardes",
     "verificado": true,
-    "vistas": 1872
+    "vistas": 1872,
+    "slug": "ven-y-disfruta-conmigo-un-momento-inolvidable"
   },
   {
     "id": "laurita-flaquita-hermosa-damita-recien-llego",
@@ -1896,7 +1975,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Tardes y noches",
     "verificado": true,
-    "vistas": 625
+    "vistas": 625,
+    "slug": "senorita-independiente-disponible"
   },
   {
     "id": "linda-sexi-mujer-aguantadora-full-serivicios-oral-y-vaginal-sin-complicaciones",
@@ -1920,7 +2000,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 1783
+    "vistas": 1783,
+    "slug": "linda-sexi-mujer-aguantadora-full-serivicios-oral-y-vaginal-sin-complicaciones"
   },
   {
     "id": "nigthclub-blue-house",
@@ -1942,7 +2023,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Tardes y noches",
     "verificado": true,
-    "vistas": 807
+    "vistas": 807,
+    "slug": "nigthclub-blue-house"
   },
   {
     "id": "ofresco-servicio-online-vendo-mi-contenido",
@@ -1963,7 +2045,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 352
+    "vistas": 352,
+    "slug": "ofresco-servicio-online-vendo-mi-contenido"
   },
   {
     "id": "paraguaya-deliciosa-y-caliente",
@@ -1984,7 +2067,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 540
+    "vistas": 540,
+    "slug": "paraguaya-deliciosa-y-caliente"
   },
   {
     "id": "piel-ardiente",
@@ -2005,7 +2089,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 2047
+    "vistas": 2047,
+    "slug": "piel-ardiente"
   },
   {
     "id": "realizo-salidas-moteles-alojamientos-o-domicilio",
@@ -2027,7 +2112,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1609
+    "vistas": 1609,
+    "slug": "realizo-salidas-moteles-alojamientos-o-domicilio"
   },
   {
     "id": "recien-llegada-deliciosa-tarijena-de-ricas-curvas-el-mejor-oral-solo-conmigo-papi",
@@ -2055,7 +2141,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 1097
+    "vistas": 1097,
+    "slug": "o-oo-o-disfruta-de-un-encuentro-unico"
   },
   {
     "id": "carlita-nueva-solo-estare-unos-dias-aqui-en-tu-ciudad-venta-de-mi-contenido-sola-y-con-pareja-amor-s",
@@ -2080,7 +2167,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 966
+    "vistas": 966,
+    "slug": "carlita-nueva-solo-estare-unos-dias-aqui-en-tu-ciudad-venta-de-mi-contenido-sola-y-con-pareja-amor-s"
   },
   {
     "id": "senorita-disponible-independiente",
@@ -2104,7 +2192,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Tardes y noches",
     "verificado": true,
-    "vistas": 1510
+    "vistas": 1510,
+    "slug": "salidas-fotos-reales-katalina-senorita-disponible-independiente"
   },
   {
     "id": "senoritas-disponibles-calientes-fogosas-arrechas-listas-para-cumplir-te-el-masminimo-deseoapretitas-",
@@ -2130,7 +2219,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 879
+    "vistas": 879,
+    "slug": "senoritas-disponibles-calientes-fogosas-arrechas-listas-para-cumplir-te-el-masminimo-deseoapretitas"
   },
   {
     "id": "sexy-senoritacaliente",
@@ -2152,7 +2242,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1727
+    "vistas": 1727,
+    "slug": "sexy-senoritacaliente"
   },
   {
     "id": "valentina-de-tetas-grandes-y-buena-cola-mis-fotos-son-reales-atiendo-con-lugar",
@@ -2183,7 +2274,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 394
+    "vistas": 394,
+    "slug": "valentina-de-tetas-grandes-y-buena-cola-mis-fotos-son-reales-atiendo-con-lugar"
   },
   {
     "id": "veni-a-perderte-entre-mis-curvas-y-mi-actitud",
@@ -2205,7 +2297,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1420
+    "vistas": 1420,
+    "slug": "veni-a-perderte-entre-mis-curvas-y-mi-actitud"
   },
   {
     "id": "vip-nuevita-en-oruro-fotos-100reales",
@@ -2227,7 +2320,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "24 horas",
     "verificado": true,
-    "vistas": 268
+    "vistas": 268,
+    "slug": "vip-nuevita-en-fotos-100reales"
   },
   {
     "id": "chicas-ardientes-listas-para-ti",
@@ -2253,7 +2347,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1986
+    "vistas": 1986,
+    "slug": "chicas-ardientes-listas-para-ti"
   },
   {
     "id": "deliciosa-kochalita-sumisa-ven-y-doma-a-esta-zorra",
@@ -2275,7 +2370,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 1226
+    "vistas": 1226,
+    "slug": "veni-a-perderte-entre-mis-curvas-y-mi-actitud-1"
   },
   {
     "id": "hermosa-figura-candente-ricien-llegadita-jovencita-daniela-una-damita-muy-caliente-sexi-con-un-rostr",
@@ -2300,7 +2396,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Lunes a Viernes",
     "verificado": true,
-    "vistas": 110
+    "vistas": 110,
+    "slug": "hermosa-figura-candente-ricien-llegadita-jovencita-daniela-una-damita-muy-ardiente-sexi-con-un-rostr"
   },
   {
     "id": "hermosa-muneca-recien-llegada",
@@ -2324,7 +2421,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1115
+    "vistas": 1115,
+    "slug": "hermosa-muneca-recien-llegada"
   },
   {
     "id": "hermosa-rubia-encantadora-jovencita-blanconita-pechugona-muy-complaciente",
@@ -2352,7 +2450,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 1034
+    "vistas": 1034,
+    "slug": "senorita-ricien-llegadita-tetona-muy-hermosa-encantadora-culonita-apretadita-muy-complaciente-fotos"
   },
   {
     "id": "hola-acabo-de-llegar-a-oruro-soy-nuevita",
@@ -2374,7 +2473,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1447
+    "vistas": 1447,
+    "slug": "hola-acabo-de-llegar-a-soy-nuevita"
   },
   {
     "id": "independiente-senorita-universitaria-disponible",
@@ -2396,7 +2496,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 2060
+    "vistas": 2060,
+    "slug": "independiente-senorita-universitaria-disponible"
   },
   {
     "id": "blanquitamacanudatetonasalidas-pechitos-naturales",
@@ -2420,7 +2521,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 855
+    "vistas": 855,
+    "slug": "blanquitamacanudatetonasalidas-pechitos-naturales"
   },
   {
     "id": "jovencita-ardiente-lista-para-hacer-realidad-tus-fantasias-mas-calientes",
@@ -2447,7 +2549,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 719
+    "vistas": 719,
+    "slug": "jovencita-ardiente-lista-para-hacer-realidad-tus-fantasias-mas-calientes"
   },
   {
     "id": "latina-independiente-exclusiva-scort-blanquita-de-vagina-rosadita",
@@ -2469,7 +2572,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1619
+    "vistas": 1619,
+    "slug": "mananeamos-baby"
   },
   {
     "id": "linda-culona-con-servicios-sin-complicaciones-te-hare-un-buen-trabajo-amor-escribeme-y-llegamos-a-bu",
@@ -2494,7 +2598,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 905
+    "vistas": 905,
+    "slug": "exclusiva-paraguaya-trato-sin-complicaciones-mis-fotos-son-100-reales-y-tengo-lugar-propio"
   },
   {
     "id": "linda-culona-servicio-sin-complicaciones-amor-te-hare-un-buen-oral-bebe-escribeme-y-llegamos-a-un-bu",
@@ -2518,7 +2623,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 1712
+    "vistas": 1712,
+    "slug": "linda-culona-servicio-sin-complicaciones-amor-te-hare-un-buen-oral-bebe-escribeme-y-llegamos-a-un-bu"
   },
   {
     "id": "luxury-spa-exclusive-for-men",
@@ -2546,7 +2652,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 1280
+    "vistas": 1280,
+    "slug": "luxury-spa"
   },
   {
     "id": "macanuda-nalgona",
@@ -2568,7 +2675,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 728
+    "vistas": 728,
+    "slug": "macanuda-nalgona"
   },
   {
     "id": "masajes-relajantes-y-sensuales-exclusivo-para-caballeros",
@@ -2597,7 +2705,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 856
+    "vistas": 856,
+    "slug": "masajes-relajantes-y-sensuales-exclusivo-para-caballeros"
   },
   {
     "id": "morena-linda-delgada-hago-de-todo-y-soy-muy-sociable",
@@ -2626,7 +2735,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 222
+    "vistas": 222,
+    "slug": "morena-linda-delgada-hago-de-todo-y-soy-muy-sociable"
   },
   {
     "id": "nicky-iniciante",
@@ -2648,7 +2758,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Fines de semana",
     "verificado": false,
-    "vistas": 1013
+    "vistas": 1013,
+    "slug": "nicky-iniciante"
   },
   {
     "id": "para-hombres-solventes",
@@ -2671,7 +2782,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Lunes a Sábado",
     "verificado": true,
-    "vistas": 435
+    "vistas": 435,
+    "slug": "para-hombres-solventes"
   },
   {
     "id": "chica-sexy-y-macanuda-disponible-para-pasar-un-rico-momento",
@@ -2694,7 +2806,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 876
+    "vistas": 876,
+    "slug": "chica-sexy-y-macanuda-disponible-para-pasar-un-rico-momento"
   },
   {
     "id": "rico-oralsexo-mojadito",
@@ -2717,7 +2830,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 1294
+    "vistas": 1294,
+    "slug": "nalgas-grandes-para-ponerlas-en-4"
   },
   {
     "id": "scort-independiente-ofrezco-una-experiencia-relajada-sin-prisas-donde-puedes-quedarte-el-tiempo-que-",
@@ -2745,7 +2859,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Mañanas y tardes",
     "verificado": true,
-    "vistas": 1041
+    "vistas": 1041,
+    "slug": "independiente-ofrezco-una-experiencia-relajada-sin-prisas-donde-puedes-quedarte-el-tiempo-que-desees"
   },
   {
     "id": "sexi-naty-una-verdadera-mujer-que-te-hara-enloquecer-de-puro-y-rico-placer-sexual",
@@ -2773,7 +2888,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1512
+    "vistas": 1512,
+    "slug": "sexi-naty-una-verdadera-mujer-que-te-hara-enloquecer-de-puro-y-rico-placer-sexual"
   },
   {
     "id": "te-gustan-nalgonascon-ganas-de-que-me-des-una-rica-cogida-soy-la-mas-arrechita-y-caliente",
@@ -2798,7 +2914,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Martes a Domingo",
     "verificado": false,
-    "vistas": 1278
+    "vistas": 1278,
+    "slug": "te-gusta-el-buen-sexo-amor-estoy-con-ganas-de-que-me-des-una-rica-cogida-soy-la-mas-arrechita-y-cali"
   },
   {
     "id": "trato-de-novios-desnudas-total-69",
@@ -2824,7 +2941,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 1315
+    "vistas": 1315,
+    "slug": "trato-de-novios-desnuda-total-69"
   },
   {
     "id": "veni-bebe-la-vamos-a-pasar-rico-tengo-ambiente-propio-desde-100-bs",
@@ -2848,7 +2966,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Centro",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 2041
+    "vistas": 2041,
+    "slug": "salidas"
   },
   {
     "id": "contenidos-y-salidas-bebe-pack-de-videos-y-fotos-videollamadas-chat-hot-novia-virtual-y-salidas-bb",
@@ -2872,7 +2991,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 1792
+    "vistas": 1792,
+    "slug": "contenidos-y-salidas-bebe-pack-de-videos-videollamadas-chat-hot-novia-virtual-y-salidas-bb"
   },
   {
     "id": "crespita-super-arrechita",
@@ -2897,7 +3017,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1940
+    "vistas": 1940,
+    "slug": "crespita-apretadita-y-ardiente"
   },
   {
     "id": "crespita-super-arrechita-1",
@@ -2921,7 +3042,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 1670
+    "vistas": 1670,
+    "slug": "crespita-super-arrechita"
   },
   {
     "id": "esther-bbte-hago-oral-sin-condon-amor-te-la-chupo-hasta-dejarte-la-bien-durita-sin-limites-y-anal-in",
@@ -2946,7 +3068,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Fines de semana",
     "verificado": true,
-    "vistas": 153
+    "vistas": 153,
+    "slug": "esther-bb-te-la-chupo-sin-condonhasta-dejartela-bien-durita-sin-limites"
   },
   {
     "id": "extranjera-de-viaje",
@@ -2969,7 +3092,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1088
+    "vistas": 1088,
+    "slug": "extranjera-de-viaje"
   },
   {
     "id": "hoy-60bs-con-full-atencion-linda-morena-delgada-culona-tu-rica-putita-de-estreno-hoy-ricas-tetas",
@@ -2993,7 +3117,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Lunes a Viernes",
     "verificado": false,
-    "vistas": 679
+    "vistas": 679,
+    "slug": "terminal-bimodal"
   },
   {
     "id": "joven-disponible",
@@ -3022,7 +3147,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1667
+    "vistas": 1667,
+    "slug": "joven-disponible"
   },
   {
     "id": "amor-que-gusto-tenerteaqui-soy-una-skokka-soy-apasionada-complaciente",
@@ -3042,7 +3168,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 1586
+    "vistas": 1586,
+    "slug": "amor-que-gusto-tenerteaqui-soy-una-scort-soy-apasionada-complaciente"
   },
   {
     "id": "damita-jovencita-disponible",
@@ -3062,7 +3189,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 943
+    "vistas": 943,
+    "slug": "damita-jovencita-disponible"
   },
   {
     "id": "daniela-la-tentacion-que-no-podras-resistir",
@@ -3084,7 +3212,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "24 horas",
     "verificado": false,
-    "vistas": 109
+    "vistas": 109,
+    "slug": "daniela-la-tentacion-que-no-podras-resistir"
   },
   {
     "id": "estoy-rica-y-apretadita-disponible-toda-la-noche-amor",
@@ -3107,7 +3236,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 531
+    "vistas": 531,
+    "slug": "estoy-rica-y-apretadita-disponible-toda-la-noche-amor"
   },
   {
     "id": "flaquita-linda-disponible",
@@ -3128,7 +3258,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Lunes a Viernes",
     "verificado": true,
-    "vistas": 347
+    "vistas": 347,
+    "slug": "lady-flaquita-linda-disponible"
   },
   {
     "id": "hola-mi-rey-soy-un-antes-y-un-despues-nos-vemos-hoy-la-mejor-atencion-y-buena-onda-el-mejor-momento-",
@@ -3150,7 +3281,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1779
+    "vistas": 1779,
+    "slug": "hola-mi-rey-soy-un-antes-y-un-despues-nos-vemos-hoy-la-mejor-atencion-y-buena-onda-el-mejor-momento"
   },
   {
     "id": "hola-soy-camila-hermosa-mujer-de-nalgas-grandes-y-muy-poderosas-ven-que-te-lo-meneare-como-tu-quiera",
@@ -3175,7 +3307,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 310
+    "vistas": 310,
+    "slug": "somos-varias-damitas-nuevas-iniciantes-benianas-crucenas-listas-para-complacer-precios-deste-los-70"
   },
   {
     "id": "independiente-disponible-para-ti",
@@ -3198,7 +3331,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Calacoto",
     "disponibilidad": "Martes a Domingo",
     "verificado": true,
-    "vistas": 250
+    "vistas": 250,
+    "slug": "nueva-amor-linda-universitaria-masajitosrelajantes-bb"
   },
   {
     "id": "linda-de-cuerpo-y-cara-ya-estoy-disponible",
@@ -3219,7 +3353,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Miraflores",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 1037
+    "vistas": 1037,
+    "slug": "linda-de-cuerpo-y-cara-ya-estoy-disponible"
   },
   {
     "id": "lindas-jovencitas",
@@ -3249,7 +3384,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Lunes a Domingo",
     "verificado": false,
-    "vistas": 1490
+    "vistas": 1490,
+    "slug": "nueva-sucursal-nuevos-ambientes-lindas-jovencitas-disponibles"
   },
   {
     "id": "luciana-madurita-zorrita-calientericas-tetitas-para-ti-conchita-mojaditafull-penetracion",
@@ -3271,7 +3407,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "24 horas",
     "verificado": true,
-    "vistas": 1153
+    "vistas": 1153,
+    "slug": "luciana-madurita-zorrita-calientericas-tetitas-para-ti-conchita-mojaditafull-penetracion"
   },
   {
     "id": "ardiente-scorts-cambita-en-la-ciudad-de-sucre-independiente-trato-de-noviosmasajista-erotica-sexy-co",
@@ -3295,7 +3432,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 164
+    "vistas": 164,
+    "slug": "ven-a-disfruta-de-un-rico-mananero-full-oral-mutuo-soy-super-complaciente-bb"
   },
   {
     "id": "morenita-arrechita-caliente",
@@ -3318,7 +3456,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 1635
+    "vistas": 1635,
+    "slug": "morenita-arrechita-caliente"
   },
   {
     "id": "nuevita-iniciante-de-18-anitos-recien-llegadita",
@@ -3348,7 +3487,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Tardes y noches",
     "verificado": true,
-    "vistas": 1785
+    "vistas": 1785,
+    "slug": "llegaron-nuevas-jovencitas"
   },
   {
     "id": "papasito-ricoquiero-sentir-tus-labios-en-mi-piel-estare-esperandote-con-ansias-en-poca-ropita-contac",
@@ -3372,7 +3512,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 1694
+    "vistas": 1694,
+    "slug": "papasito-rico-hoy-deste-los-80-mas-oral-aprobecha-asta-el-domingo-quiero-sentir-tus-labios-en-mi-pie"
   },
   {
     "id": "precios-desde-100-bs-amor-buen-trato",
@@ -3394,7 +3535,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Sopocachi",
     "disponibilidad": "Mañanas y tardes",
     "verificado": false,
-    "vistas": 274
+    "vistas": 274,
+    "slug": "bella-unica-trato-de-rey-fotos-reales-carinito-puedes-tocarme-enterita-mi-amor-desnudo-total-te-espe"
   },
   {
     "id": "sera-con-espectaculares-caderas-con-buenos-pecho-piernudita",
@@ -3413,7 +3555,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "San Miguel",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 539
+    "vistas": 539,
+    "slug": "sara-con-expectaculares-caderas-con-buenos-pecho-piernudita"
   },
   {
     "id": "ven-y-cogeme-rico-papi-soy-tu-flaquita-bonita-estare-toda-la-noche",
@@ -3438,7 +3581,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Lunes a Domingo",
     "verificado": true,
-    "vistas": 1592
+    "vistas": 1592,
+    "slug": "ven-y-cogeme-rico-papi-soy-tu-flaquita-bonita-estare-toda-la-noche"
   },
   {
     "id": "bellas-munequitas-a-eleccion",
@@ -3460,7 +3604,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Sur",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1115
+    "vistas": 1115,
+    "slug": "bellas-sexis-universitarias-a-eleccion"
   },
   {
     "id": "blancona-cochalita-servicio-completo-anal-y-vaginal",
@@ -3490,7 +3635,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Lunes a Sábado",
     "verificado": true,
-    "vistas": 167
+    "vistas": 167,
+    "slug": "blancona-cochalita-servicio-completo-anal-y-vaginal"
   },
   {
     "id": "cambita-sensual-y-ardiente",
@@ -3512,7 +3658,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 564
+    "vistas": 564,
+    "slug": "cambita-sensual-y-ardiente"
   },
   {
     "id": "carla-mujer-calienta-fogosa-con-pecho-grande-espectaculares-carreras",
@@ -3532,7 +3679,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Obrajes",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 1598
+    "vistas": 1598,
+    "slug": "carla-mujer-calienta-fogosa-con-pecho-grande-espectaculares-caderas"
   },
   {
     "id": "cholita-bonita-apretadita-con-ganas-que-me-abraces-mi-amor",
@@ -3555,7 +3703,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Este",
     "disponibilidad": "24 horas",
     "verificado": true,
-    "vistas": 1655
+    "vistas": 1655,
+    "slug": "cholita-bonita-apretadita-con-ganas-que-me-abraces-mi-amor"
   },
   {
     "id": "chupame-la-conchitate-dare-oral-al-natural-rico-culito",
@@ -3577,7 +3726,8 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Oeste",
     "disponibilidad": "Tardes y noches",
     "verificado": false,
-    "vistas": 679
+    "vistas": 679,
+    "slug": "chupame-la-conchitate-dare-oral-al-natural-culonacaliente-jugosa-apretadadita"
   },
   {
     "id": "club-privado-el-limbo-con-el-mejor-ambiente-privado-con-senoritas-calientes-dispuestas-a-cumplir-te-",
@@ -3603,13 +3753,19 @@ export const anunciosData: Anuncio[] = [
     "ubicacion": "Zona Norte",
     "disponibilidad": "Lunes a Sábado",
     "verificado": false,
-    "vistas": 1293
+    "vistas": 1293,
+    "slug": "el-mejor-club-privado-en-cuenta-con-las-diosas-bellas-damitas-a-eleccion-del-cliente-macanudas-altas"
   }
 ]
 
-// Helper function to find anuncio by ID
+// Helper function to find anuncio by ID (deprecated - use getAnuncioBySlug)
 export function getAnuncioById(id: string): Anuncio | undefined {
   return anunciosData.find(a => a.id === id)
+}
+
+// Helper function to find anuncio by slug (preferred)
+export function getAnuncioBySlug(slug: string): Anuncio | undefined {
+  return anunciosData.find(a => a.slug === slug)
 }
 
 // Helper function to get anuncios by city

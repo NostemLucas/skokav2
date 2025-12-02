@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  metadataBase: new URL("https://damasdecompania.bo"),
+  metadataBase: new URL("https://damasdecompania.com.bo"),
   alternates: {
     canonical: "/",
   },

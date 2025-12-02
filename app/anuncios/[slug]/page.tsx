@@ -1,19 +1,19 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getAnuncioById, anunciosData } from "@/lib/anuncios-data"
+import { getAnuncioBySlug, anunciosData } from "@/lib/anuncios-data"
 import AnuncioDetailClient from "./anuncio-detail-client"
 import { ChevronLeft } from "lucide-react"
 
 // Generate static params for all anuncios
 export async function generateStaticParams() {
   return anunciosData.map((anuncio) => ({
-    id: anuncio.id,
+    slug: anuncio.slug,
   }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-  const { id } = await params
-  const anuncio = getAnuncioById(id)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const anuncio = getAnuncioBySlug(slug)
 
   if (!anuncio) {
     return {
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: `${anuncio.title} - ${anuncio.city}`,
       description: description,
       type: "article",
-      url: `/anuncios/${id}`,
+      url: `/anuncios/${slug}`,
       images: [
         {
           url: imageUrl,
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       images: [imageUrl],
     },
     alternates: {
-      canonical: `/anuncios/${id}`,
+      canonical: `/anuncios/${slug}`,
     },
     robots: {
       index: true,
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 // Generate JSON-LD structured data
-function generateJsonLd(anuncio: NonNullable<ReturnType<typeof getAnuncioById>>) {
+function generateJsonLd(anuncio: NonNullable<ReturnType<typeof getAnuncioBySlug>>) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -117,9 +117,9 @@ function generateJsonLd(anuncio: NonNullable<ReturnType<typeof getAnuncioById>>)
   }
 }
 
-export default async function AnuncioDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  const anuncio = getAnuncioById(id)
+export default async function AnuncioDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const anuncio = getAnuncioBySlug(slug)
 
   if (!anuncio) {
     return (
