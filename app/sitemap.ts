@@ -3,7 +3,7 @@ import { anunciosData } from "@/lib/anuncios-data"
 import { getAllDepartamentoSlugs } from "@/lib/departamentos-config"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.damasdecompañia.com.bo"
+  const baseUrl = "https://damasdecompañia.com.bo"
   const lastModified = new Date("2025-12-02T12:59:08+00:00")
 
   // Main page
