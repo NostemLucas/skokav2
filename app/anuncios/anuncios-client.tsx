@@ -116,7 +116,7 @@ export default function AnunciosClientPage() {
                 <span className="text-sm font-semibold text-primary">Anuncios verificados</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3">
-                Anuncios en{" "}
+                Damas de compañía, escorts y sexo | Anuncios en{" "}
                 <span className="text-primary">Bolivia</span>
               </h1>
               <p className="text-lg text-muted-foreground">

@@ -42,9 +42,9 @@ export default function Hero() {
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
-              Encuentra{" "}
+              Damas de compañía,{" "}
               <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                Compañía
+                escorts y sexo
               </span>
               <br />
               en Bolivia

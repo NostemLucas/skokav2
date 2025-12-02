@@ -118,7 +118,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
                 {/* Title */}
                 <div className="space-y-4">
                   <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] tracking-tight">
-                    Damas de compañía y escorts en{" "}
+                    Damas de compañía, escorts y sexo en{" "}
                     <span className="relative inline-block">
                       <span className={`bg-gradient-to-r ${config.accent.gradient} bg-clip-text text-transparent`}>
                         {config.nombreCorto}
