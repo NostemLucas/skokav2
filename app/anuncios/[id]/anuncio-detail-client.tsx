@@ -171,9 +171,9 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
           <span className="font-medium">Volver a anuncios</span>
         </Link>
 
-        <h1 className="sr-only">
-          {anuncio.title} - Anuncio en {anuncio.city}
-        </h1>
+   <h1 className="sr-only">
+        {anuncio.title} - Escort en {anuncio.city}, Bolivia | Contacto WhatsApp
+      </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Gallery - Left column (3/5) */}

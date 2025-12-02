@@ -74,7 +74,7 @@ export default function DepartamentosGrid() {
                 {/* Background Image */}
                 <Image
                   src={dept.previewImage || "/placeholder.svg"}
-                  alt={`Escorts en ${dept.nombreCorto}`}
+                  alt={`Escorts y Damas de Compañía en ${dept.nombreCorto}`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"

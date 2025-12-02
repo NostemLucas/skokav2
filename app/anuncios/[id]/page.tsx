@@ -1,8 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getAnuncioById } from "@/lib/anuncios-data"
+import { getAnuncioById, anunciosData } from "@/lib/anuncios-data"
 import AnuncioDetailClient from "./anuncio-detail-client"
 import { ChevronLeft } from "lucide-react"
+
+// Generate static params for all anuncios
+export async function generateStaticParams() {
+  return anunciosData.map((anuncio) => ({
+    id: anuncio.id,
+  }))
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
@@ -12,28 +19,41 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     return {
       title: "Anuncio no encontrado | Clasificados Bolivia",
       description: "El anuncio que buscas no existe o ha sido eliminado.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     }
   }
 
   const imageUrl = anuncio.fotos[0] || "/og-default.jpg"
-  const description = anuncio.anuncio.substring(0, 155) + "..."
+  const description = anuncio.anuncio.length > 155
+    ? anuncio.anuncio.substring(0, 155) + "..."
+    : anuncio.anuncio
+
+  // Build keywords array
+  const keywords = [
+    anuncio.title,
+    anuncio.city,
+    `escorts ${anuncio.city.toLowerCase()}`,
+    `acompañantes ${anuncio.city.toLowerCase()}`,
+    "clasificados bolivia",
+    "contacto whatsapp",
+    ...(anuncio.servicios || []),
+  ]
 
   return {
     title: `${anuncio.title} en ${anuncio.city} | Clasificados Bolivia`,
     description: description,
-    keywords: [
-      anuncio.title,
-      anuncio.city,
-      "escorts " + anuncio.city.toLowerCase(),
-      "acompañantes " + anuncio.city.toLowerCase(),
-      "clasificados bolivia",
-      "contacto whatsapp",
-      ...(anuncio.servicios || []),
-    ].join(", "),
+    keywords: keywords,
+    authors: [{ name: "Clasificados Bolivia" }],
+    creator: "Clasificados Bolivia",
+    publisher: "Clasificados Bolivia",
     openGraph: {
       title: `${anuncio.title} - ${anuncio.city}`,
       description: description,
       type: "article",
+      url: `/anuncios/${id}`,
       images: [
         {
           url: imageUrl,
@@ -57,6 +77,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
     },
   }
 }
@@ -124,9 +151,6 @@ export default async function AnuncioDetailPage({ params }: { params: Promise<{ 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="sr-only">
-        {anuncio.title} - Escort en {anuncio.city}, Bolivia | Contacto WhatsApp
-      </h1>
       <AnuncioDetailClient anuncio={anuncio} />
     </>
   )

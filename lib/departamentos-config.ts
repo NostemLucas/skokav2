@@ -59,8 +59,8 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en La Paz | Damas de Compañía La Paz Bolivia",
       description:
-        "Encuentra las mejores escorts y damas de compañía en La Paz, Bolivia. Acompañantes verificadas en Zona Sur, Sopocachi, Calacoto. Contacto directo WhatsApp.",
-      keywords: ["escorts la paz", "damas de compañía la paz", "acompañantes la paz bolivia", "escorts zona sur"],
+        "Encuentra las mejores escorts, damas de compañía y acompañantes en La Paz, Bolivia. Servicios de sexo verificados en Zona Sur, Sopocachi, Calacoto. Contacto directo WhatsApp.",
+      keywords: ["escorts la paz", "damas de compañía la paz", "acompañantes la paz bolivia", "escorts zona sur", "sexo la paz"],
     },
   },
   "santa-cruz": {
@@ -87,12 +87,13 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en Santa Cruz | Damas de Compañía Santa Cruz Bolivia",
       description:
-        "Las mejores escorts y acompañantes en Santa Cruz de la Sierra. Mujeres hermosas y verificadas en Equipetrol, Urbarí. WhatsApp disponible.",
+        "Las mejores escorts, damas de compañía y acompañantes en Santa Cruz de la Sierra. Mujeres hermosas y verificadas en Equipetrol, Urbarí. WhatsApp disponible.",
       keywords: [
         "escorts santa cruz",
         "damas de compañía santa cruz",
         "acompañantes equipetrol",
         "escorts bolivia oriente",
+        "sexo santa cruz",
       ],
     },
   },
@@ -120,8 +121,8 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en Cochabamba | Damas de Compañía Cochabamba Bolivia",
       description:
-        "Encuentra escorts y damas de compañía en Cochabamba. Acompañantes verificadas en Zona Norte, Cala Cala, Recoleta. Contacto WhatsApp.",
-      keywords: ["escorts cochabamba", "damas de compañía cochabamba", "acompañantes llajta", "escorts cala cala"],
+        "Encuentra escorts, damas de compañía y acompañantes en Cochabamba. Servicios verificados en Zona Norte, Cala Cala, Recoleta. Contacto WhatsApp.",
+      keywords: ["escorts cochabamba", "damas de compañía cochabamba", "acompañantes llajta", "escorts cala cala", "sexo cochabamba"],
     },
   },
   "el-alto": {
@@ -148,8 +149,8 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en El Alto | Damas de Compañía El Alto Bolivia",
       description:
-        "Escorts y acompañantes en El Alto, Bolivia. Atención 24 horas, discreción garantizada. Precios accesibles. WhatsApp disponible.",
-      keywords: ["escorts el alto", "damas de compañía el alto", "acompañantes el alto bolivia", "escorts 24 horas"],
+        "Escorts, damas de compañía y acompañantes en El Alto, Bolivia. Atención 24 horas, discreción garantizada. Precios accesibles. WhatsApp disponible.",
+      keywords: ["escorts el alto", "damas de compañía el alto", "acompañantes el alto bolivia", "escorts 24 horas", "sexo el alto"],
     },
   },
   sucre: {
@@ -176,8 +177,8 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en Sucre | Damas de Compañía Sucre Bolivia",
       description:
-        "Escorts elegantes y sofisticadas en Sucre, Bolivia. Acompañantes verificadas en el Centro Histórico. Experiencias premium. WhatsApp.",
-      keywords: ["escorts sucre", "damas de compañía sucre", "acompañantes ciudad blanca", "escorts sucre bolivia"],
+        "Escorts, damas de compañía elegantes y sofisticadas en Sucre, Bolivia. Acompañantes verificadas en el Centro Histórico. Experiencias premium. WhatsApp.",
+      keywords: ["escorts sucre", "damas de compañía sucre", "acompañantes ciudad blanca", "escorts sucre bolivia", "sexo sucre"],
     },
   },
   oruro: {
@@ -204,8 +205,8 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en Oruro | Damas de Compañía Oruro Bolivia",
       description:
-        "Encuentra escorts y acompañantes en Oruro, Bolivia. Mujeres verificadas con la pasión del carnaval. Contacto WhatsApp.",
-      keywords: ["escorts oruro", "damas de compañía oruro", "acompañantes oruro bolivia", "escorts carnaval"],
+        "Encuentra escorts, damas de compañía y acompañantes en Oruro, Bolivia. Mujeres verificadas con la pasión del carnaval. Contacto WhatsApp.",
+      keywords: ["escorts oruro", "damas de compañía oruro", "acompañantes oruro bolivia", "escorts carnaval", "sexo oruro"],
     },
   },
   potosi: {
@@ -232,8 +233,8 @@ export const departamentosConfig: Record<string, DepartamentoConfig> = {
     seo: {
       title: "Escorts en Potosí | Damas de Compañía Potosí Bolivia",
       description:
-        "Escorts y acompañantes en Potosí, Bolivia. Mujeres verificadas en la villa imperial. Discreción y calidad. WhatsApp.",
-      keywords: ["escorts potosi", "damas de compañía potosi", "acompañantes potosi bolivia", "escorts villa imperial"],
+        "Escorts, damas de compañía y acompañantes en Potosí, Bolivia. Mujeres verificadas en la villa imperial. Discreción y calidad. WhatsApp.",
+      keywords: ["escorts potosi", "damas de compañía potosi", "acompañantes potosi bolivia", "escorts villa imperial", "sexo potosi"],
     },
   },
 }

@@ -99,7 +99,7 @@ export default function CategoryCards() {
                 {/* Background Image */}
                 <Image
                   src={category.image}
-                  alt={category.name}
+                  alt={`Escorts y Damas de Compañía - ${category.name}`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"

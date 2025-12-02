@@ -13,11 +13,11 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Acompañantes y Damas de Compañía en Bolivia | Verificadas",
+    default: "Escorts y Damas de Compañía en Bolivia | Acompañantes Verificadas",
     template: "%s | Damas de Compañía Bolivia",
   },
   description:
-    "Encuentra acompañantes y modelos de compañía verificadas en Bolivia. Contacto directo, discreto y seguro.",
+    "Encuentra escorts, damas de compañía y acompañantes verificadas en Bolivia. Servicios de sexo seguro, discreto y verificado. Contacto directo por WhatsApp.",
   keywords: [
     "damas de compañía bolivia",
     "escorts bolivia",
@@ -101,7 +101,7 @@ export default function RootLayout({
       </head>
       <body className={`${geist.variable} font-sans antialiased`}>
         <h1 className="sr-only">
-        Escorts y acompañantes en Bolivia — Servicio seguro y verificado
+        Escorts, Damas de Compañía y Acompañantes en Bolivia — Servicio de sexo seguro y verificado
         </h1>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
