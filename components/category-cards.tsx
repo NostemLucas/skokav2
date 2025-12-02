@@ -9,7 +9,8 @@ const categories = [
     id: 1,
     name: "Mujeres",
     slug: "mujeres",
-    description: "Encuentra en Bolivia a las mejores escorts que te ofrecen gran variedad de servicios eróticos.",
+    description: "Encuentra en Bolivia a las mejores escorts que te ofrecen gran variedad de servicios eróticos y sexo.",
+    altText: "Escorts, Damas de Compañía y servicios de sexo con Mujeres en Bolivia",
     image: "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed7201892f6.jpg",
     icon: Heart,
     stats: "500+",
@@ -24,7 +25,8 @@ const categories = [
     id: 2,
     name: "Trans",
     slug: "trans",
-    description: "Atrévete a probar todas las aristas del placer con las más sexys trans y travestis de Bolivia",
+    description: "Atrévete a probar todas las aristas del placer y sexo con las más sexys trans y travestis de Bolivia",
+    altText: "Escorts, Damas de Compañía y servicios de sexo con Trans en Bolivia",
     image: "/images/category-trans.jpg",
     icon: Sparkles,
     stats: "150+",
@@ -39,7 +41,8 @@ const categories = [
     id: 3,
     name: "Hombres",
     slug: "hombres",
-    description: "Encuentra escorts y acompañantes masculinos en Bolivia. Disfruta de encuentros con hombres.",
+    description: "Encuentra escorts y acompañantes masculinos en Bolivia. Disfruta de encuentros de sexo con hombres.",
+    altText: "Escorts, Damas de Compañía y servicios de sexo con Hombres en Bolivia",
     image: "/images/category-hombres.jpg",
     icon: User,
     stats: "80+",
@@ -54,7 +57,8 @@ const categories = [
     id: 4,
     name: "Parejas",
     slug: "parejas",
-    description: "Encontrar citas y encuentros eróticos con quienes descubrir tu lado más ardiente.",
+    description: "Encontrar citas y encuentros eróticos de sexo con quienes descubrir tu lado más ardiente.",
+    altText: "Escorts, Damas de Compañía y servicios de sexo con Parejas en Bolivia",
     image: "/images/category-parejas.jpg",
     icon: Users,
     stats: "60+",
@@ -99,7 +103,7 @@ export default function CategoryCards() {
                 {/* Background Image */}
                 <Image
                   src={category.image}
-                  alt={`Escorts y Damas de Compañía - ${category.name}`}
+                  alt={category.altText}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"

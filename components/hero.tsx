@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.webp"
-          alt="Escorts, Damas de Compañía y Acompañantes en Bolivia — servicio de sexo discreto y verificado"
+          alt="Fotografía de damas de compañía y escorts en Bolivia"
           fill
           className="object-cover object-right-top"
           priority

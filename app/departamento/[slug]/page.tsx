@@ -112,7 +112,7 @@ export default async function DepartamentoPage({ params }: PageProps) {
 
   return (
   <>
-   <h1 className="sr-only">Escorts, Damas de Compañía y Acompañantes en {config.nombre}</h1>
+   <h1 className="sr-only">Damas de compañía y escorts en {config.nombre}</h1>
    <DepartamentoLanding config={config} />
   </>
   )
