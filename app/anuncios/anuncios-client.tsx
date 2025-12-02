@@ -229,7 +229,7 @@ export default function AnunciosClientPage() {
                     {anuncio.fotos.length > 0 ? (
                       <Image
                         src={anuncio.fotos[0]}
-                        alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
+                        alt={`${anuncio.title} | Damas de compañía, escorts y sexo en ${anuncio.city}`}
                         fill
                         sizes="160px"
                         className="object-cover transition-transform duration-500 group-hover:scale-110"

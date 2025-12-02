@@ -104,7 +104,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
             <div className="relative w-full h-full max-w-5xl max-h-[80vh]">
               <Image
                 src={anuncio.fotos[currentImageIndex] || "/placeholder.svg"}
-                alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
+                alt={`${anuncio.title} | Damas de compañía, escorts y sexo en ${anuncio.city}`}
                 fill
                 className="object-contain"
                 sizes="100vw"
@@ -148,7 +148,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                 >
                   <Image
                     src={foto || "/placeholder.svg"}
-                    alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
+                    alt={`${anuncio.title} | Damas de compañía, escorts y sexo en ${anuncio.city}`}
                     fill
                     className="object-cover"
                     sizes="64px"
@@ -186,7 +186,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
               {anuncio.fotos.length > 0 ? (
                 <Image
                   src={anuncio.fotos[currentImageIndex] || "/placeholder.svg"}
-                  alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
+                  alt={`${anuncio.title} | Damas de compañía, escorts y sexo en ${anuncio.city}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 60vw"
@@ -262,7 +262,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                   >
                     <Image
                       src={foto || "/placeholder.svg"}
-                      alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
+                      alt={`${anuncio.title} | Damas de compañía, escorts y sexo en ${anuncio.city}`}
                       fill
                       className="object-cover"
                       sizes="80px"

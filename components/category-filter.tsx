@@ -93,7 +93,7 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
               {/* Background Image */}
               <Image
                 src={city.image}
-                alt={`Fotografía de damas de compañía y escorts en ${city.label}`}
+                alt={`Damas de compañía, escorts y sexo en ${city.label}`}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"

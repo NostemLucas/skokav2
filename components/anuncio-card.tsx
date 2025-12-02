@@ -21,7 +21,7 @@ export default function AnuncioCard({ anuncio, onOpen }: AnuncioCardProps) {
           <>
             <Image
               src={anuncio.fotos[0] || "/placeholder.svg"}
-              alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
+              alt={`${anuncio.title} | Damas de compañía, escorts y sexo en ${anuncio.city}`}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
