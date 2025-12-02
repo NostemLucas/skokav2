@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   if (!anuncio) {
     return {
-      title: "Anuncio no encontrado | Clasificados Bolivia",
+      title: "Anuncio no encontrado | Damas de Compañía Bolivia",
       description: "El anuncio que buscas no existe o ha sido eliminado.",
       robots: {
         index: false,
@@ -34,21 +34,22 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   // Build keywords array
   const keywords = [
     anuncio.title,
-    anuncio.city,
+    `damas de compañía ${anuncio.city.toLowerCase()}`,
     `escorts ${anuncio.city.toLowerCase()}`,
     `acompañantes ${anuncio.city.toLowerCase()}`,
-    "clasificados bolivia",
+    `sexo ${anuncio.city.toLowerCase()}`,
+    "servicios discretos",
     "contacto whatsapp",
     ...(anuncio.servicios || []),
   ]
 
   return {
-    title: `${anuncio.title} en ${anuncio.city} | Clasificados Bolivia`,
-    description: description,
+    title: `${anuncio.title} | Damas de compañía y escorts en ${anuncio.city}`,
+    description: `${description} Servicios de sexo discretos en ${anuncio.city}.`,
     keywords: keywords,
-    authors: [{ name: "Clasificados Bolivia" }],
-    creator: "Clasificados Bolivia",
-    publisher: "Clasificados Bolivia",
+    authors: [{ name: "Damas de Compañía Bolivia" }],
+    creator: "Damas de Compañía Bolivia",
+    publisher: "Damas de Compañía Bolivia",
     openGraph: {
       title: `${anuncio.title} - ${anuncio.city}`,
       description: description,

@@ -172,7 +172,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
         </Link>
 
    <h1 className="sr-only">
-        {anuncio.title} - Escort en {anuncio.city}, Bolivia | Contacto WhatsApp
+        {anuncio.title} | Damas de compañía y escorts en {anuncio.city}
       </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
@@ -186,7 +186,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
               {anuncio.fotos.length > 0 ? (
                 <Image
                   src={anuncio.fotos[currentImageIndex] || "/placeholder.svg"}
-                  alt={`${anuncio.title} - Imagen ${currentImageIndex + 1}`}
+                  alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 60vw"
@@ -262,7 +262,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                   >
                     <Image
                       src={foto || "/placeholder.svg"}
-                      alt={`${anuncio.title} - Foto ${idx + 1} de ${anuncio.fotos.length}`}
+                      alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
                       fill
                       className="object-cover"
                       sizes="80px"

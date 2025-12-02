@@ -45,7 +45,7 @@ export default function AnuncioDetailModal({ anuncio, open, onOpenChange }: Anun
               <div className="relative h-80 overflow-hidden rounded-xl bg-muted">
                 <Image
                   src={anuncio.fotos[currentImageIndex] || "/placeholder.svg"}
-                  alt={`Foto ${currentImageIndex + 1}`}
+                  alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
                   fill
                   className="object-cover"
                 />
@@ -83,7 +83,7 @@ export default function AnuncioDetailModal({ anuncio, open, onOpenChange }: Anun
                     >
                       <Image
                         src={foto || "/placeholder.svg"}
-                        alt={`Thumbnail ${index + 1}`}
+                        alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
                         fill
                         className="object-cover"
                       />

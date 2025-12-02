@@ -228,7 +228,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
                             {anuncio.fotos[0] ? (
                               <Image
                                 src={anuncio.fotos[0] || "/placeholder.svg"}
-                                alt={anuncio.title}
+                                alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
                                 fill
                                 className="object-cover"
                               />
@@ -455,7 +455,7 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
                       {anuncio.fotos.length > 0 ? (
                         <Image
                           src={anuncio.fotos[0] || "/placeholder.svg"}
-                          alt={anuncio.title}
+                          alt={`${anuncio.title} | Fotografía de damas de compañía y escorts en ${anuncio.city}`}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
