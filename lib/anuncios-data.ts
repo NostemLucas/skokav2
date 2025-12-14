@@ -618,7 +618,7 @@ export const anunciosData: Anuncio[] = [
     "slug": "damita-madura-csra-bonita"
   },
   {
-    "id": "devuelta-a-la-llajta-mor",
+    "id": "devuelta-a-la-llajta-mor-2036",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/devuelta-a-la-llajta-mor-bo6fzn77z/",
     "city": "Cochabamba",
@@ -1469,7 +1469,7 @@ export const anunciosData: Anuncio[] = [
     "slug": "picara-y-peligrosamente-encantadora"
   },
   {
-    "id": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales",
+    "id": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales-0667",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales-bo65xjsqy/",
     "city": "La Paz",
@@ -3240,7 +3240,7 @@ export const anunciosData: Anuncio[] = [
     "slug": "estoy-rica-y-apretadita-disponible-toda-la-noche-amor"
   },
   {
-    "id": "flaquita-linda-disponible",
+    "id": "flaquita-linda-disponible-8373",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/flaquita-linda-disponible-bo3x1dzks/",
     "city": "Sucre",
@@ -3357,7 +3357,7 @@ export const anunciosData: Anuncio[] = [
     "slug": "linda-de-cuerpo-y-cara-ya-estoy-disponible"
   },
   {
-    "id": "lindas-jovencitas",
+    "id": "lindas-jovencitas-1630",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/lindas-jovencitas-bo8ihu6tn/",
     "city": "Sucre",
@@ -3460,7 +3460,7 @@ export const anunciosData: Anuncio[] = [
     "slug": "morenita-arrechita-caliente"
   },
   {
-    "id": "nuevita-iniciante-de-18-anitos-recien-llegadita",
+    "id": "nuevita-iniciante-de-18-anitos-recien-llegadita-1630",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/nuevita-iniciante-de-18-anitos-recien-llegadita-bo0fel93j/",
     "city": "Sucre",
@@ -3870,7 +3870,7 @@ export const anunciosData: Anuncio[] = [
   },
   {
     "id": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales",
-    "slug": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales",
+    "slug": "preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales-0667",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/preciosa-de-rostro-distinguida-y-de-hermosos-atributos-fisicos-fotos-100-reales-bo1kdaabc/",
     "city": "La Paz",
@@ -4324,7 +4324,7 @@ export const anunciosData: Anuncio[] = [
     "vistas": 218
   },
   {
-    "id": "hermosa-figura-candente-ricien-llegadita-jovencita-daniela-una-damita-muy-caliente-sexi-con-un-rostr",
+    "id": "hermosa-figura-candente-ricien-llegadita-jovencita-daniela-una-damita-muy-caliente-sexi-con-un-rostr-0919",
     "slug": "nueva-hermosa-figura-candente-ricien-llegadita-jovencita-daniela-una-damita-muy-",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/hermosa-figura-candente-ricien-llegadita-jovencita-daniela-una-damita-muy-caliente-sexi-con-un-rostr-bo4sguy9m/",
@@ -4593,7 +4593,7 @@ export const anunciosData: Anuncio[] = [
     "vistas": 676
   },
   {
-    "id": "veni-a-perderte-entre-mis-curvas-y-mi-actitud",
+    "id": "veni-a-perderte-entre-mis-curvas-y-mi-actitud-5084",
     "slug": "promo-de-finde-acompanante-que-te-hara-perder-la-nocion-del-tiempo",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/veni-a-perderte-entre-mis-curvas-y-mi-actitud-bo1wpc663/",
@@ -4858,7 +4858,7 @@ export const anunciosData: Anuncio[] = [
   },
   {
     "id": "lindas-jovencitas",
-    "slug": "nueva-sucursal-nuevos-ambientes-lindas-jovencitas-disponibles",
+    "slug": "nueva-sucursal-nuevos-ambientes-lindas-jovencitas-disponibles-1630",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/lindas-jovencitas-bo8ihu6tn/",
     "city": "Sucre",
@@ -5044,7 +5044,7 @@ export const anunciosData: Anuncio[] = [
   },
   {
     "id": "nuevita-iniciante-de-18-anitos-recien-llegadita",
-    "slug": "llegaron-nuevas-jovencitas",
+    "slug": "llegaron-nuevas-jovencitas-1630",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/nuevita-iniciante-de-18-anitos-recien-llegadita-bo0fel93j/",
     "city": "Sucre",
@@ -5544,8 +5544,8 @@ export const anunciosData: Anuncio[] = [
     "vistas": 1089
   },
   {
-    "id": "solo-ventas-contenidos-y-videos-llamadas-caliente",
-    "slug": "solo-ventas-contenidos-y-videos-llamadas-caliente",
+    "id": "solo-ventas-contenidos-y-videos-llamadas-caliente-9426",
+    "slug": "solo-ventas-contenidos-y-videos-llamadas-caliente-9426",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/solo-ventas-contenidos-y-videos-llamadas-caliente-bo6wu64n9/",
     "city": "Cochabamba",
@@ -5820,7 +5820,7 @@ export const anunciosData: Anuncio[] = [
     "vistas": 135
   },
   {
-    "id": "hermosa-curvilinea",
+    "id": "hermosa-curvilinea-7253",
     "slug": "tetona-apretadita",
     "date": "13-12-2025",
     "link": "https://bo.skokka.com/anuncio/hermosa-curvilinea-bo8lmayrh/",
