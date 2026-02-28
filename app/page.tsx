@@ -1,12 +1,33 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import CategoryCards from "@/components/category-cards";
 import Footer from "@/components/footer";
-import CategoryFilter from "@/components/category-filter";
 import DepartamentosGrid from "@/components/departamentos-grid";
 import FeaturedAnuncios from "@/components/featured-anuncios";
 
 export default function Home() {
+  const router = useRouter()
+  const [isRedirecting, setIsRedirecting] = useState(false)
+
+  useEffect(() => {
+    // Detectar si es mobile (pantalla pequeña)
+    const isMobile = window.innerWidth < 768 // 768px = breakpoint md de Tailwind
+
+    if (isMobile) {
+      // En mobile, redirigir a /anuncios
+      setIsRedirecting(true)
+      router.push("/anuncios")
+    }
+  }, [router])
+
+  // Si está redirigiendo en mobile, no renderizar nada
+  if (isRedirecting) {
+    return null
+  }
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
