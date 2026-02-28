@@ -7,7 +7,7 @@ import Image from "next/image"
 import { MapPin, ArrowRight, Users, Mountain, Palmtree, Sun, Building2, Church, Drum, Gem } from "lucide-react"
 import { departamentosConfig } from "@/lib/departamentos-config"
 import { anunciosData } from "@/lib/anuncios-data"
-import { useMemo } from "react"
+import { useMemo, useState, useEffect } from "react"
 
 const departmentIcons: Record<string, React.ElementType> = {
   "la-paz": Mountain,
@@ -20,29 +20,51 @@ const departmentIcons: Record<string, React.ElementType> = {
 }
 
 export default function DepartamentosGrid() {
+  const [isClient, setIsClient] = useState(false)
+
+  // Solo renderizar aleatorios después de hidratar en el cliente
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   // Calcular conteo real de anuncios por departamento
   const departamentosWithCounts = useMemo(() => {
-    return Object.values(departamentosConfig).map((dept) => {
+    const allDepartments = Object.values(departamentosConfig).map((dept) => {
       const count = anunciosData.filter(
         (a) =>
           a.city.toLowerCase() === dept.nombre.toLowerCase() || a.city.toLowerCase() === dept.nombreCorto.toLowerCase(),
       ).length
 
-      // Obtener imagen del primer anuncio de la ciudad
-      const cityAnuncio = anunciosData.find(
+      // Obtener todos los anuncios de la ciudad con fotos
+      const cityAnuncios = anunciosData.filter(
         (a) =>
           (a.city.toLowerCase() === dept.nombre.toLowerCase() ||
             a.city.toLowerCase() === dept.nombreCorto.toLowerCase()) &&
           a.fotos.length > 0,
       )
 
+      // Seleccionar un anuncio ALEATORIO de la ciudad (solo en cliente)
+      let previewImage = dept.heroImage
+      if (isClient && cityAnuncios.length > 0) {
+        const randomIndex = Math.floor(Math.random() * cityAnuncios.length)
+        previewImage = cityAnuncios[randomIndex].fotos[0]
+      } else if (!isClient && cityAnuncios.length > 0) {
+        // En el servidor, usar el primero para evitar mismatch
+        previewImage = cityAnuncios[0].fotos[0]
+      }
+
       return {
         ...dept,
         realCount: count || Number.parseInt(dept.stats.anuncios) || 0,
-        previewImage: cityAnuncio?.fotos[0] || dept.heroImage,
+        previewImage,
       }
     })
-  }, [])
+
+    // Ordenar por cantidad de anuncios (descendente) y tomar solo los 4 primeros
+    return allDepartments
+      .sort((a, b) => b.realCount - a.realCount)
+      .slice(0, 4)
+  }, [isClient])
 
   return (
     <section className="py-20 sm:py-28">
@@ -56,12 +78,12 @@ export default function DepartamentosGrid() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Cada ciudad tiene su propio encanto. Descubre las mejores escorts de Bolivia.
+            Las ciudades con más actividad. Descubre las mejores escorts de Bolivia.
           </p>
         </div>
 
-        {/* Grid de departamentos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        {/* Grid de departamentos - Solo top 4 */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {departamentosWithCounts.map((dept) => {
             const Icon = departmentIcons[dept.slug] || MapPin
 

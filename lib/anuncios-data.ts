@@ -40,6 +40,12 @@ export function getRecentAnuncios(limit?: number): Anuncio[] {
   return limit ? sorted.slice(0, limit) : sorted
 }
 
+// Get random anuncios (shuffled)
+export function getRandomAnuncios(limit?: number): Anuncio[] {
+  const shuffled = [...anunciosData].sort(() => Math.random() - 0.5)
+  return limit ? shuffled.slice(0, limit) : shuffled
+}
+
 export const anunciosData: Anuncio[] = [
   {
     "id": "inocente-delgadita-alta-muy-bonita-de-rosto-y-de-cuerpo-deseable-con-buenos-atributos",

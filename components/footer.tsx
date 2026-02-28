@@ -52,7 +52,7 @@ Damas de compañia es la mayor plataforma de anuncios para escorts independiente
             <div>
               <h3 className="font-semibold text-foreground mb-4 text-sm">Legal</h3>
               <ul className="space-y-2.5">
-                <li><Link href="/terminos-y-condiciones" className="text-sm text-muted-foreground hover:text-primary transition-colors">Términos</Link></li>
+                <li><Link href="/terminos-y-condiciones" className="text-sm text-muted-foreground hover:text-primary transition-colors">Términos y Condiciones</Link></li>
                 <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacidad</Link></li>
                 <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookies</Link></li>
               </ul>
@@ -94,9 +94,18 @@ Damas de compañia es la mayor plataforma de anuncios para escorts independiente
       <div className="border-t border-border/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-muted-foreground">
-              © 2025 Damas de Compañía Bolivia
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <p className="text-xs text-muted-foreground">
+                © 2025 Damas de Compañía Bolivia
+              </p>
+              <span className="hidden sm:inline text-muted-foreground/30">•</span>
+              <Link
+                href="/terminos-y-condiciones"
+                className="text-xs text-muted-foreground hover:text-primary transition-colors underline underline-offset-2"
+              >
+                Términos y Condiciones
+              </Link>
+            </div>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors px-3 py-1.5 hover:bg-primary/10 rounded-lg"

@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { MapPin, Calendar, Phone, ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
+import { MapPin, Calendar, Phone, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import type { Anuncio } from "@/lib/anuncios-data"
@@ -129,15 +130,15 @@ export default function AnuncioDetailModal({ anuncio, open, onOpenChange }: Anun
             </Button>
           </a>
 
-          {/* Enlace externo */}
-          <a
-            href={anuncio.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-center text-sm text-accent hover:underline"
+          {/* Enlace a página completa */}
+          <Link
+            href={`/anuncios/${anuncio.slug || anuncio.id}`}
+            onClick={() => onOpenChange(false)}
+            className="flex items-center justify-center gap-2 text-sm text-accent hover:text-accent/80 font-medium transition-colors py-2"
           >
-            Ver anuncio original
-          </a>
+            <ExternalLink className="w-4 h-4" />
+            Ver detalles completos
+          </Link>
         </div>
       </DialogContent>
     </Dialog>
