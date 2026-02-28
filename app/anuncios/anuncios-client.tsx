@@ -80,10 +80,19 @@ export default function AnunciosClientPage() {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
   const paginatedAnuncios = filteredAnuncios.slice(startIndex, startIndex + ITEMS_PER_PAGE)
 
-  // Reset to page 1 when filter changes
+  // Handler para cambiar ciudad (desktop y mobile)
   const handleCityChange = (city: string) => {
     setSelectedCity(city)
-    setCurrentPage(1)
+    setCurrentPage(1) // Reset a página 1 cuando cambia filtro
+
+    // Actualizar URL
+    const url = new URL(window.location.href)
+    if (city) {
+      url.searchParams.set("ciudad", city)
+    } else {
+      url.searchParams.delete("ciudad")
+    }
+    window.history.replaceState({}, "", url.toString())
   }
 
   // Generate page numbers to show
@@ -114,10 +123,12 @@ export default function AnunciosClientPage() {
   }
 
   // Show TikTok feed directly on mobile
-  if (isMobile && filteredAnuncios.length > 0) {
+  if (isMobile) {
     return (
       <AnunciosFeedMobile
-        anuncios={filteredAnuncios}
+        anuncios={anunciosData} // Pasar TODOS los anuncios sin filtrar
+        selectedCity={selectedCity}
+        onCityChange={handleCityChange}
         onClose={() => {}} // No close action needed - mobile only has this view
       />
     )

@@ -22,14 +22,20 @@ import type { Anuncio } from "@/lib/anuncios-data"
 
 interface AnunciosFeedMobileProps {
   anuncios: Anuncio[]
+  selectedCity?: string
+  onCityChange?: (city: string) => void
   onClose: () => void
 }
 
-export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMobileProps) {
+export default function AnunciosFeedMobile({
+  anuncios,
+  selectedCity: externalSelectedCity = "",
+  onCityChange,
+  onClose
+}: AnunciosFeedMobileProps) {
   const [currentAnuncioIndex, setCurrentAnuncioIndex] = useState(0)
   const [showInfo, setShowInfo] = useState(false)
   const [showFilters, setShowFilters] = useState(false)
-  const [selectedCity, setSelectedCity] = useState<string>("")
 
   // Vertical carousel for anuncios
   const [emblaRefVertical, emblaApiVertical] = useEmblaCarousel({
@@ -39,15 +45,24 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
     duration: 20
   })
 
-  // Get unique cities from anuncios
+  // Get unique cities from all anuncios
   const cities = Array.from(new Set(anuncios.map(a => a.city))).sort()
 
-  // Filter anuncios by city
-  const filteredAnuncios = selectedCity
-    ? anuncios.filter(a => a.city === selectedCity)
+  // Filter anuncios by city (usa el filtro externo)
+  const filteredAnuncios = externalSelectedCity
+    ? anuncios.filter(a => a.city === externalSelectedCity)
     : anuncios
 
   const currentAnuncio = filteredAnuncios[currentAnuncioIndex]
+
+  // Handler para cambiar ciudad
+  const handleCityChange = (city: string) => {
+    if (onCityChange) {
+      onCityChange(city)
+    }
+    setCurrentAnuncioIndex(0) // Reset al primer anuncio cuando cambia filtro
+    setShowFilters(false)
+  }
 
   // Handle vertical scroll
   const onSelect = useCallback(() => {
@@ -97,7 +112,7 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
       emblaApiVertical.scrollTo(0)
       setCurrentAnuncioIndex(0)
     }
-  }, [selectedCity, emblaApiVertical])
+  }, [externalSelectedCity, emblaApiVertical])
 
   return (
     <div className="fixed inset-0 z-50 bg-black">
@@ -109,7 +124,7 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
           className="flex flex-col items-center gap-0.5 group"
         >
           <div className={`flex items-center justify-center w-11 h-11 rounded-full backdrop-blur-md transition-all ${
-            selectedCity || showFilters
+            externalSelectedCity || showFilters
               ? 'bg-primary shadow-md shadow-primary/30'
               : 'bg-black/40 hover:bg-black/60'
           }`}>
@@ -198,9 +213,9 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
               <h4 className="text-xs text-white/60 uppercase tracking-wider font-semibold">
                 Ciudad
               </h4>
-              {selectedCity && (
+              {externalSelectedCity && (
                 <button
-                  onClick={() => setSelectedCity("")}
+                  onClick={() => handleCityChange("")}
                   className="text-xs text-primary hover:text-primary/80 font-medium"
                 >
                   Limpiar
@@ -210,12 +225,9 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
 
             {/* All option */}
             <button
-              onClick={() => {
-                setSelectedCity("")
-                setShowFilters(false)
-              }}
+              onClick={() => handleCityChange("")}
               className={`w-full text-left px-4 py-3.5 rounded-xl mb-2 transition-all ${
-                !selectedCity
+                !externalSelectedCity
                   ? 'bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/40 text-white shadow-lg shadow-primary/10'
                   : 'text-white/80 hover:bg-white/5'
               }`}
@@ -236,12 +248,9 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
                 return (
                   <button
                     key={city}
-                    onClick={() => {
-                      setSelectedCity(city)
-                      setShowFilters(false)
-                    }}
+                    onClick={() => handleCityChange(city)}
                     className={`w-full text-left px-4 py-3 rounded-xl transition-all ${
-                      selectedCity === city
+                      externalSelectedCity === city
                         ? 'bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/40 text-white shadow-lg shadow-primary/10'
                         : 'text-white/80 hover:bg-white/5'
                     }`}
@@ -284,11 +293,11 @@ export default function AnunciosFeedMobile({ anuncios, onClose }: AnunciosFeedMo
       </div>
 
       {/* Active filter badge - top center */}
-      {selectedCity && (
+      {externalSelectedCity && (
         <div className="absolute top-5 left-1/2 -translate-x-1/2 z-10 px-4 py-2 bg-black/60 backdrop-blur-xl rounded-full border border-white/15 shadow-md animate-in fade-in slide-in-from-top">
           <div className="flex items-center gap-2">
             <MapPin className="w-3.5 h-3.5 text-primary" />
-            <span className="text-xs text-white font-semibold">{selectedCity}</span>
+            <span className="text-xs text-white font-semibold">{externalSelectedCity}</span>
             <button
               onClick={() => setSelectedCity("")}
               className="ml-0.5 hover:bg-white/20 rounded-full p-0.5 transition-all"
