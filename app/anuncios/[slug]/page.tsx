@@ -91,29 +91,49 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 // Generate JSON-LD structured data
 function generateJsonLd(anuncio: NonNullable<ReturnType<typeof getAnuncioBySlug>>) {
+  const baseUrl = "https://damasdecompañia.com.bo"
+  const adUrl = `${baseUrl}/anuncios/${anuncio.slug}`
+
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: anuncio.title,
-    description: anuncio.anuncio,
-    image: anuncio.fotos,
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      priceCurrency: "BOB",
-      price: anuncio.precio || "0",
-    },
-    aggregateRating: anuncio.verificado
-      ? {
-          "@type": "AggregateRating",
-          ratingValue: "5",
-          reviewCount: "1",
+    "@type": "ClassifiedAd",
+    "@id": `${adUrl}/#ad`,
+    "name": `${anuncio.title} - Dama de Compañía en ${anuncio.city}`,
+    "description": anuncio.anuncio,
+    "inLanguage": "es",
+    "datePosted": anuncio.date,
+    "url": adUrl,
+    "image": anuncio.fotos.length > 0 ? anuncio.fotos : undefined,
+    "itemOffered": {
+      "@type": "Service",
+      "name": `Servicio de acompañamiento en ${anuncio.city}`,
+      "description": anuncio.anuncio,
+      "serviceType": "Servicio de acompañamiento",
+      "provider": {
+        "@type": "Person",
+        "name": anuncio.title
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": anuncio.city,
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Bolivia"
         }
-      : undefined,
-    brand: {
-      "@type": "Brand",
-      name: "Clasificados Bolivia",
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": `https://wa.me/591${anuncio.whatsapp}`,
+        "servicePhone": `+591${anuncio.whatsapp}`
+      }
     },
+    "offers": anuncio.precio ? {
+      "@type": "Offer",
+      "price": anuncio.precio.toString(),
+      "priceCurrency": "BOB",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().split('T')[0]
+    } : undefined,
   }
 }
 
@@ -144,13 +164,44 @@ export default async function AnuncioDetailPage({ params }: { params: Promise<{ 
     )
   }
 
+  const baseUrl = "https://damasdecompañia.com.bo"
+  const adUrl = `${baseUrl}/anuncios/${slug}`
   const jsonLd = generateJsonLd(anuncio)
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Anuncios",
+        "item": `${baseUrl}/anuncios`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": anuncio.title,
+        "item": adUrl
+      }
+    ]
+  }
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <AnuncioDetailClient anuncio={anuncio} />
     </>

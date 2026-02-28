@@ -110,11 +110,59 @@ export default async function DepartamentoPage({ params }: PageProps) {
     notFound()
   }
 
+  const baseUrl = "https://damasdecompañia.com.bo"
+  const pageUrl = `${baseUrl}/departamento/${slug}`
+
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}/#collection`,
+    "name": `Damas de Compañia en ${config.nombre}`,
+    "url": pageUrl,
+    "description": `Listado actualizado de damas de compañia en ${config.nombre}, Bolivia.`,
+    "inLanguage": "es",
+    "about": {
+      "@type": "City",
+      "name": config.nombre,
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "Bolivia"
+      }
+    }
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": config.nombre,
+        "item": pageUrl
+      }
+    ]
+  }
+
   return (
   <>
+   <script
+     type="application/ld+json"
+     dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+   />
+   <script
+     type="application/ld+json"
+     dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+   />
    <h1 className="sr-only">Damas de compañía, escorts y sexo en {config.nombre}</h1>
    <DepartamentoLanding config={config} />
   </>
   )
- 
+
 }

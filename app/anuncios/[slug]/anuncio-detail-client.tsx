@@ -458,12 +458,13 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
               {/* Action buttons */}
               <div className="space-y-3">
                 <a
-                  href={`https://wa.me/${anuncio.whatsapp.replace(/\D/g, "")}`}
+                  href={`https://wa.me/591${anuncio.whatsapp.replace(/\D/g, "")}?text=Vi%20tu%20anuncio%20en%20https://damasdecompañia.com.bo/%20Me%20gustaria%20quedar%20contigo`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-xl transition-all hover:shadow-xl hover:shadow-green-500/30"
+                  aria-label={`Contactar a ${anuncio.title} por WhatsApp`}
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
                   Contactar por WhatsApp
                 </a>
 
@@ -490,6 +491,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-background/50 hover:bg-background text-foreground py-2.5 px-4 rounded-xl transition-colors text-center text-sm font-semibold border border-white/10"
+                    aria-label="Compartir en Twitter"
                   >
                     Twitter
                   </a>
@@ -498,6 +500,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-primary/10 hover:bg-primary/20 text-primary py-2.5 px-4 rounded-xl transition-colors text-center text-sm font-semibold"
+                    aria-label="Compartir por WhatsApp"
                   >
                     WhatsApp
                   </a>

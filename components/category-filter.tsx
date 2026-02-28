@@ -70,7 +70,7 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
               <span className="text-sm font-bold text-primary uppercase tracking-wider">Scorts</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-              Explora por <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Ciudad</span>
+              Buscar por <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Ciudad</span>
             </h2>
           </div>
           <Link

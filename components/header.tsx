@@ -37,15 +37,15 @@ export default function Header() {
             >
               <User className="w-5 h-5" aria-hidden="true" />
             </button>
-            <Link
-              href="#"
+            <button
               className="relative group bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 flex items-center gap-2 overflow-hidden"
+              aria-label="Publicar anuncio de dama de compañía"
             >
               <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               <Sparkles className="w-4 h-4 relative" aria-hidden="true" />
               <span className="hidden sm:inline relative">Publicar</span>
               <Plus className="w-4 h-4 sm:hidden relative" aria-hidden="true" />
-            </Link>
+            </button>
           </div>
         </div>
       </nav>

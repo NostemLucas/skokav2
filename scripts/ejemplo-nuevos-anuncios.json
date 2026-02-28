@@ -1,0 +1,38 @@
+[
+  {
+    "date": "28-02-2026",
+    "city": "La Paz",
+    "title": "Ejemplo de anuncio nuevo",
+    "anuncio": "Descripción completa del anuncio aquí. Puedes incluir todos los detalles del servicio.",
+    "whatsapp": "75912236",
+    "precio": 200,
+    "fotos": [
+      "https://ejemplo.com/imagen1.jpg",
+      "https://ejemplo.com/imagen2.jpg"
+    ],
+    "edad": 25,
+    "servicios": [
+      "Masajes",
+      "Acompañante"
+    ],
+    "ubicacion": "Zona Sur",
+    "disponibilidad": "Lunes a Viernes",
+    "verificado": true
+  },
+  {
+    "date": "28-02-2026",
+    "city": "Santa Cruz",
+    "title": "Otro ejemplo de anuncio",
+    "anuncio": "Segunda descripción de ejemplo.",
+    "whatsapp": "76543210",
+    "precio": null,
+    "fotos": [
+      "https://ejemplo.com/imagen3.jpg"
+    ],
+    "edad": 22,
+    "servicios": [
+      "Encuentros",
+      "Eventos"
+    ]
+  }
+]

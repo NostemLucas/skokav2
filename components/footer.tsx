@@ -52,7 +52,7 @@ Damas de compañia es la mayor plataforma de anuncios para escorts independiente
             <div>
               <h3 className="font-semibold text-foreground mb-4 text-sm">Legal</h3>
               <ul className="space-y-2.5">
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Términos</Link></li>
+                <li><Link href="/terminos-y-condiciones" className="text-sm text-muted-foreground hover:text-primary transition-colors">Términos</Link></li>
                 <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacidad</Link></li>
                 <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookies</Link></li>
               </ul>

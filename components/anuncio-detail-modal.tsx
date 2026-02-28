@@ -54,14 +54,16 @@ export default function AnuncioDetailModal({ anuncio, open, onOpenChange }: Anun
                     <button
                       onClick={handlePrevImage}
                       className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition"
+                      aria-label="Imagen anterior"
                     >
-                      <ChevronLeft className="h-5 w-5" />
+                      <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                     </button>
                     <button
                       onClick={handleNextImage}
                       className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition"
+                      aria-label="Imagen siguiente"
                     >
-                      <ChevronRight className="h-5 w-5" />
+                      <ChevronRight className="h-5 w-5" aria-hidden="true" />
                     </button>
                     <div className="absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-black/50 px-3 py-1 text-xs text-white">
                       {currentImageIndex + 1} / {anuncio.fotos.length}
@@ -80,6 +82,7 @@ export default function AnuncioDetailModal({ anuncio, open, onOpenChange }: Anun
                       className={`relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg border-2 transition ${
                         index === currentImageIndex ? "border-accent" : "border-transparent opacity-50 hover:opacity-75"
                       }`}
+                      aria-label={`Ver imagen ${index + 1} de ${anuncio.fotos.length}`}
                     >
                       <Image
                         src={foto || "/placeholder.svg"}
@@ -113,9 +116,15 @@ export default function AnuncioDetailModal({ anuncio, open, onOpenChange }: Anun
           </div>
 
           {/* Botón WhatsApp */}
-          <a href={`https://wa.me/${anuncio.whatsapp}`} target="_blank" rel="noopener noreferrer" className="block">
+          <a
+            href={`https://wa.me/591${anuncio.whatsapp}?text=Vi%20tu%20anuncio%20en%20https://damasdecompañia.com.bo/%20Me%20gustaria%20quedar%20contigo`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+            aria-label={`Contactar a ${anuncio.title} por WhatsApp`}
+          >
             <Button className="w-full rounded-xl bg-[#25D366] hover:bg-[#20BA58] text-white font-semibold py-6 text-base">
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
               Contactar por WhatsApp
             </Button>
           </a>

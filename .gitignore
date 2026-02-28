@@ -85,3 +85,8 @@ coverage-report/
 *.iml
 
 # If you want to save lockfiles, remove the package-lock line above.
+
+# Scripts - Archivos temporales y backups
+scripts/anuncios-descargados.json
+lib/anuncios-data.ts.backup.*
+*.backup.*

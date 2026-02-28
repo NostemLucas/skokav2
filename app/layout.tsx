@@ -1,15 +1,19 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { ThemeProvider } from "@/components/theme-provider"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import AgeVerificationModal from "@/components/age-verification-modal";
+import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist",
-})
+  preload: true,
+  fallback: ["system-ui", "arial"],
+  adjustFontFallback: true,
+});
 
 export const metadata: Metadata = {
   title: "Damas de compañía y escorts | Servicios de sexo en Bolivia",
@@ -57,7 +61,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Damas de Compañía Bolivia",
-    description: "Escorts y acompañantes verificadas en Bolivia. Contacto directo por WhatsApp.",
+    description:
+      "Escorts y acompañantes verificadas en Bolivia. Contacto directo por WhatsApp.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -83,28 +88,47 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/manifest.json",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#1A2332" media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" content="#F8F7F4" media="(prefers-color-scheme: light)" />
+        <meta
+          name="theme-color"
+          content="#1A2332"
+          media="(prefers-color-scheme: dark)"
+        />
+        <meta
+          name="theme-color"
+          content="#F8F7F4"
+          media="(prefers-color-scheme: light)"
+        />
+        {/* DNS Prefetch & Preconnect for performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${geist.variable} font-sans antialiased`}>
-        <h1 className="sr-only">
-        Damas de compañía y escorts en Bolivia
-        </h1>
+        <h1 className="sr-only">Damas de compañía y escorts en Bolivia</h1>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <AgeVerificationModal />
           {children}
           <Analytics />
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

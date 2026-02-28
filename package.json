@@ -6,7 +6,12 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "update-anuncios": "node scripts/update-anuncios.mjs",
+    "update-by-id": "node scripts/update-by-id.mjs",
+    "fetch-server": "node scripts/fetch-from-server.mjs",
+    "rebuild": "node scripts/rebuild-site.mjs",
+    "sync": "node scripts/fetch-from-server.mjs && node scripts/rebuild-site.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

@@ -4,15 +4,25 @@ import { getAllDepartamentoSlugs } from "@/lib/departamentos-config"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://damasdecompañia.com.bo"
-  const lastModified = new Date("2025-12-02T12:59:08+00:00")
+  const currentDate = new Date()
 
   // Main page
   const mainPage: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: lastModified,
+      lastModified: currentDate,
       changeFrequency: "daily",
       priority: 1.0,
+    },
+  ]
+
+  // Static pages
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/terminos-y-condiciones`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.3,
     },
   ]
 
@@ -20,43 +30,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categories = ["mujeres", "trans", "hombres", "parejas"]
   const categoryPages: MetadataRoute.Sitemap = categories.map((categoria) => ({
     url: `${baseUrl}/anuncios?categoria=${categoria}`,
-    lastModified: lastModified,
+    lastModified: currentDate,
     changeFrequency: "daily" as const,
-    priority: 0.8,
+    priority: 0.7,
   }))
 
   // Anuncios page
   const anunciosPage: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/anuncios`,
-      lastModified: lastModified,
+      lastModified: currentDate,
       changeFrequency: "hourly",
-      priority: 0.8,
+      priority: 0.9,
     },
   ]
 
-  // Department pages
+  // Department pages (high priority for SEO)
   const departmentSlugs = getAllDepartamentoSlugs()
   const departmentPages: MetadataRoute.Sitemap = departmentSlugs.map((slug) => ({
     url: `${baseUrl}/departamento/${slug}`,
-    lastModified: lastModified,
+    lastModified: currentDate,
     changeFrequency: "daily" as const,
-    priority: 0.8,
+    priority: 0.9,
   }))
 
   // Individual announcement pages
-  const anuncioPages: MetadataRoute.Sitemap = anunciosData.map((anuncio) => ({
-    url: `${baseUrl}/anuncios/${anuncio.slug}`,
-    lastModified: lastModified,
-    changeFrequency: "daily" as const,
-    priority: 0.64,
-  }))
+  const anuncioPages: MetadataRoute.Sitemap = anunciosData.map((anuncio) => {
+    // Use individual anuncio dates if available and valid, fallback to current date
+    let anuncioDate = currentDate
+    if (anuncio.date) {
+      const parsedDate = new Date(anuncio.date)
+      // Check if date is valid
+      if (!isNaN(parsedDate.getTime())) {
+        anuncioDate = parsedDate
+      }
+    }
+
+    return {
+      url: `${baseUrl}/anuncios/${anuncio.slug}`,
+      lastModified: anuncioDate,
+      changeFrequency: "weekly" as const,
+      priority: anuncio.verificado ? 0.8 : 0.6,
+    }
+  })
 
   return [
     ...mainPage,
-    ...categoryPages,
+    ...staticPages,
     ...anunciosPage,
     ...departmentPages,
+    ...categoryPages,
     ...anuncioPages,
   ]
 }

@@ -7,7 +7,8 @@ import Image from "next/image"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import SearchModal from "@/components/search-modal"
-import { anunciosData } from "@/lib/anuncios-data"
+import AnunciosFeedMobile from "./anuncios-feed-mobile"
+import { anunciosData, sortAnunciosByDate } from "@/lib/anuncios-data"
 import { Search, MapPin, Filter, ChevronDown, Sparkles, CheckCircle2, Camera, MessageCircle, Eye, ChevronLeft, ChevronRight, X } from "lucide-react"
 
 const ITEMS_PER_PAGE = 10
@@ -19,6 +20,17 @@ export default function AnunciosClientPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [showFilters, setShowFilters] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Read URL params on mount and when they change
   useEffect(() => {
@@ -32,7 +44,7 @@ export default function AnunciosClientPage() {
   const cities = Array.from(new Set(anunciosData.map((a) => a.city)))
 
   const filteredAnuncios = useMemo(() => {
-    return anunciosData.filter((anuncio) => {
+    const filtered = anunciosData.filter((anuncio) => {
       const matchesCity = !selectedCity || anuncio.city === selectedCity
 
       // Search in title, description, city
@@ -44,6 +56,9 @@ export default function AnunciosClientPage() {
 
       return matchesCity && matchesSearch
     })
+
+    // Sort by date (most recent first)
+    return sortAnunciosByDate(filtered)
   }, [selectedCity, searchQuery])
 
   const clearSearch = () => {
@@ -96,6 +111,16 @@ export default function AnunciosClientPage() {
       }
     }
     return pages
+  }
+
+  // Show TikTok feed directly on mobile
+  if (isMobile && filteredAnuncios.length > 0) {
+    return (
+      <AnunciosFeedMobile
+        anuncios={filteredAnuncios}
+        onClose={() => {}} // No close action needed - mobile only has this view
+      />
+    )
   }
 
   return (
