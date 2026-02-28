@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import Header from "@/components/header"
@@ -33,7 +34,20 @@ interface DepartamentoLandingProps {
 }
 
 export default function DepartamentoLanding({ config }: DepartamentoLandingProps) {
+  const router = useRouter()
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isRedirecting, setIsRedirecting] = useState(false)
+
+  // Redirigir a vista TikTok en mobile
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768 // 768px = breakpoint md
+
+    if (isMobile) {
+      // En mobile, redirigir a /anuncios filtrado por esta ciudad
+      setIsRedirecting(true)
+      router.push(`/anuncios?ciudad=${encodeURIComponent(config.nombreCorto)}`)
+    }
+  }, [router, config.nombreCorto])
 
   // Filtrar anuncios por ciudad
   const cityAnuncios = useMemo(() => {
@@ -46,6 +60,11 @@ export default function DepartamentoLanding({ config }: DepartamentoLandingProps
 
   // Obtener los últimos 6 anuncios para mostrar
   const featuredAnuncios = cityAnuncios.slice(0, 6)
+
+  // Si está redirigiendo en mobile, no renderizar nada
+  if (isRedirecting) {
+    return null
+  }
 
   return (
     <main className="min-h-screen bg-background">

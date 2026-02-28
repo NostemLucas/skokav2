@@ -3,6 +3,7 @@
 import type React from "react"
 
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { MapPin, ArrowRight, Users, Mountain, Palmtree, Sun, Building2, Church, Drum, Gem } from "lucide-react"
 import { departamentosConfig } from "@/lib/departamentos-config"
@@ -20,12 +21,25 @@ const departmentIcons: Record<string, React.ElementType> = {
 }
 
 export default function DepartamentosGrid() {
+  const router = useRouter()
   const [isClient, setIsClient] = useState(false)
 
   // Solo renderizar aleatorios después de hidratar en el cliente
   useEffect(() => {
     setIsClient(true)
   }, [])
+
+  // Handler para click en tarjetas de departamento
+  const handleDepartmentClick = (e: React.MouseEvent, deptSlug: string, deptNombreCorto: string) => {
+    const isMobile = window.innerWidth < 768
+
+    if (isMobile) {
+      e.preventDefault()
+      // En mobile, ir a vista TikTok filtrada por ciudad
+      router.push(`/anuncios?ciudad=${encodeURIComponent(deptNombreCorto)}`)
+    }
+    // En desktop, deja que el Link funcione normalmente (va a /departamento/[slug])
+  }
 
   // Calcular conteo real de anuncios por departamento
   const departamentosWithCounts = useMemo(() => {
@@ -91,6 +105,7 @@ export default function DepartamentosGrid() {
               <Link
                 key={dept.slug}
                 href={`/departamento/${dept.slug}`}
+                onClick={(e) => handleDepartmentClick(e, dept.slug, dept.nombreCorto)}
                 className="group relative aspect-[3/4] rounded-2xl overflow-hidden"
               >
                 {/* Background Image */}
