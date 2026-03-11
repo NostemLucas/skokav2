@@ -111,7 +111,8 @@ async function updateById(inputFile) {
     }
 
     const arrayString = existingContent.substring(arrayStart, arrayEnd)
-    const existingAnuncios = JSON.parse(arrayString)
+    // Parse JavaScript array (not strict JSON) using Function constructor
+    const existingAnuncios = new Function('return ' + arrayString)()
 
     // Create map by ID for quick lookup
     const existingById = new Map(existingAnuncios.map(a => [a.id, a]))

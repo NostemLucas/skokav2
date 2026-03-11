@@ -1,52 +1,1171 @@
 export interface Anuncio {
-  id: string
-  slug: string
-  date: string
-  link: string
-  city: string
-  title: string
-  anuncio: string
-  whatsapp: string
-  precio: number | null
-  fotos: string[]
-  email?: string
-  telefono?: string
-  edad?: number
-  servicios?: string[]
-  ubicacion?: string
-  disponibilidad?: string
-  verificado?: boolean
-  vistas?: number
+  id: string;
+  slug: string;
+  date: string;
+  link: string;
+  city: string;
+  title: string;
+  anuncio: string;
+  whatsapp: string;
+  precio: number | null;
+  fotos: string[];
+  email?: string;
+  telefono?: string;
+  edad?: number;
+  servicios?: string[];
+  ubicacion?: string;
+  disponibilidad?: string;
+  verificado?: boolean;
+  vistas?: number;
 }
 
 // Helper function to parse DD-MM-YYYY format to Date
 function parseDateDDMMYYYY(dateStr: string): Date {
-  const [day, month, year] = dateStr.split('-').map(Number)
-  return new Date(year, month - 1, day)
+  const [day, month, year] = dateStr.split("-").map(Number);
+  return new Date(year, month - 1, day);
 }
 
 // Helper function to sort anuncios by date (most recent first)
 export function sortAnunciosByDate(anuncios: Anuncio[]): Anuncio[] {
   return [...anuncios].sort((a, b) => {
-    const dateA = parseDateDDMMYYYY(a.date)
-    const dateB = parseDateDDMMYYYY(b.date)
-    return dateB.getTime() - dateA.getTime() // Descending order (newest first)
-  })
+    const dateA = parseDateDDMMYYYY(a.date);
+    const dateB = parseDateDDMMYYYY(b.date);
+    return dateB.getTime() - dateA.getTime(); // Descending order (newest first)
+  });
 }
 
 // Get anuncios sorted by date (most recent first)
 export function getRecentAnuncios(limit?: number): Anuncio[] {
-  const sorted = sortAnunciosByDate(anunciosData)
-  return limit ? sorted.slice(0, limit) : sorted
+  const sorted = sortAnunciosByDate(anunciosData);
+  return limit ? sorted.slice(0, limit) : sorted;
 }
 
 // Get random anuncios (shuffled)
 export function getRandomAnuncios(limit?: number): Anuncio[] {
-  const shuffled = [...anunciosData].sort(() => Math.random() - 0.5)
-  return limit ? shuffled.slice(0, limit) : shuffled
+  const shuffled = [...anunciosData].sort(() => Math.random() - 0.5);
+  return limit ? shuffled.slice(0, limit) : shuffled;
 }
 
 export const anunciosData: Anuncio[] = [
+  {
+    "id": "ven-escapate-de-tu-rutina-diaria-estoy-disponible-todo-el-tiempo-carino-en-mi-encontraras-placerrr-s",
+    "slug": "ven-escapate-de-tu-rutina-diaria-estoy-disponible-todo-el-tiempo-carino-en-mi-encontraras-placerrr-s",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/ven-escapate-de-tu-rutina-diaria-estoy-disponible-todo-el-tiempo-carino-en-mi-encontraras-placerrr-s-bo0bieqq4/",
+    "city": "Santa Cruz",
+    "title": "Ven escapate de tu rutina diaria estoy disponible todo el tiempo carino en mi encontraras placerrr sensualidad",
+    "anuncio": "Disfruta de un masaje sensual sexo oral y mucho más privado con total discreción y sin prisas Mis fotos son reales y mi trato es de enamorados con besos y caricias No te arrepentirásSoy una chica con un cuerpo de Diosa y cuando me conozcas no querrás dejarme ir A mi lado vivirás momentos inolvidables Te ofrezco un trato de pareja cordial y totalmente privado",
+    "whatsapp": "75425873",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/10dcf27369d548059e923fa79a9e02b6.jpg",
+      "/images/anuncios/a59bbce767e549a4a80031982f545d4a.jpg",
+      "/images/anuncios/f495461a1e4247908d0e7471b4cba930.jpg",
+      "/images/anuncios/e748ae999c9242e2af2a907f17a58629.jpg",
+      "/images/anuncios/2f7986ebe641465d8c3f2fc466986212.jpg",
+      "/images/anuncios/f7525ce2547f4c0485492c4f346975c9.jpg",
+      "/images/anuncios/c0fe8f7806dc40d9b0374d414ba9ac53.jpg",
+      "/images/anuncios/0017d450fa454584875dff32acb8da9f.jpg"
+    ]
+  },
+  {
+    "id": "100bs-full-anal-y-oral-al-natural-sin-apuros-desnuda-total-tetona-ardiente-traga-lechecita-complacie",
+    "slug": "100bs-full-anal-y-oral-al-natural-sin-apuros-desnuda-total-tetona-ardiente-traga-lechecita-complacie",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/100bs-full-anal-y-oral-al-natural-sin-apuros-desnuda-total-tetona-ardiente-traga-lechecita-complacie-bo01jc61o/",
+    "city": "Cochabamba",
+    "title": "100bs FULL ANAL Y ORAL AL NATURAL SIN APUROS DESNUDA TOTAL TETONA ARDIENTE TRAGA LECHECITA COMPLACIENTE",
+    "anuncio": "Hola amor Soy la AYLEEN Exquisita lo que estás buscando coqueta sensual amorosaComplaciente adicta Al Sexo Figura espectacular piel sensual y delicada Exitantes Cuento con ambiente propio para disfrutar a lo máximo TAMBIÉN TE PUEDO OFRECER VIDEOS LLAMADAS O VENTA DE PACK DE VIDEOS NOPOR AMETEURS EXQUISITOS MÍOS XXX SI DESEAS AMOR PREGUNTA Y TE DOY MAS INFORMACIÓN",
+    "whatsapp": "62896970",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/7110ad4295304467bd96183f527e7055.jpg",
+      "/images/anuncios/f1d3e33e19594958b136d340e83f0457.jpg",
+      "/images/anuncios/ff4f0307b2cf44e4ab15a88572944f4d.jpg",
+      "/images/anuncios/458fa12c48dc44c7a4a2b6e222910be2.jpg",
+      "/images/anuncios/436622bc08d746d58e8f1d4432d6d0b0.jpg",
+      "/images/anuncios/21b030b29e084d65aacf8aa9184c3820.jpg",
+      "/images/anuncios/36411aa73c1348629bbdc3b79e3d8e4a.jpg",
+      "/images/anuncios/be19ab5268cc45c8877d98f0ef82d2a9.jpg",
+      "/images/anuncios/d7d7056c88dd4121b0ac1bc721a187f1.jpg",
+      "/images/anuncios/7a14c6b4cca74abcb1493d8a84577d44.jpg",
+      "/images/anuncios/7110ad4295304467bd96183f527e7055.jpg",
+      "/images/anuncios/f1d3e33e19594958b136d340e83f0457.jpg"
+    ]
+  },
+  {
+    "id": "oral-sin-condon-papi-hasta-dejartela-bien-durita-el-tiempo-que-gustes",
+    "slug": "oral-sin-condon-papi-hasta-dejartela-bien-durita-el-tiempo-que-gustes",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/esther-bbte-hago-oral-sin-condon-amor-te-la-chupo-hasta-dejarte-la-bien-durita-sin-limites-y-anal-in-bo3mbh9qu/",
+    "city": "Santa Cruz",
+    "title": "Oral sin condon papi hasta dejartela bien durita el tiempo que gustes",
+    "anuncio": "Realizo solo salidas amor Domicilio Alojamientos Residencial Motel Hotel SOLO MANDAS TU UBICACIÓN AMOR Y YO VOY HASTA DONDE ESTES NO TENGO AMBIENTE NI PUNTO FIJO Soy carismática te atiendo sin apuros me gusta disfrutar el momento OJO NO SOY FLACA SOY CUERPUDITA CON CURVAS",
+    "whatsapp": "60969889",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/8257a311f7cd4d4db17ff516f1ce4581.jpg",
+      "/images/anuncios/853cd70817054b69b3e75d6799b6d82c.jpg",
+      "/images/anuncios/0c3c0048a66e4f4086654a9b64eddfe7.jpg",
+      "/images/anuncios/c3ff147f93614d71a1ba2fc48b50fb63.jpg"
+    ]
+  },
+  {
+    "id": "candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo",
+    "slug": "candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo-bo0kw7lin/",
+    "city": "Cochabamba",
+    "title": "CANDY Y MELANYTRIOSSIN CONDONJOVENCITAS ARRECHITASOFERTON 100bs 80bsANAL PROFUNDO",
+    "anuncio": "CANDY Y MELANYLAS DIOSAS DEL SEXO DURO Y SALVAJEme encuentro por la AROMA Y ESTEBAN ARCE cuento con habitación independiente con full aire acondicionado limpio discreto Hago SIN CONDÓN 50 Bs x 15 min 80 Bs x 20 min 100 Bs x 30 min 150 Bs x 1hrs de relaciones sin límites lo hacemos Foto en el Perfil 100 real nada falso TRÍOS FULL ANAL ACEPTO PAGOS POR QR Y AFECTIVO",
+    "whatsapp": "77439321",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/10b4a8464f6545b1a1635329a95d54c4.jpg",
+      "/images/anuncios/ebba08adef324efcbc0d048f61b0dd55.jpg",
+      "/images/anuncios/c36ead2a5efc4d3cba58e5676141a7f2.jpg",
+      "/images/anuncios/b91d33e020a847efb7fa2c374d5dbe37.jpg",
+      "/images/anuncios/15a881aad99046db9d76eb61bb8b0218.jpg",
+      "/images/anuncios/f8ba394eb27d4d53b4417dbe217e8e34.jpg",
+      "/images/anuncios/10b4a8464f6545b1a1635329a95d54c4.jpg",
+      "/images/anuncios/ebba08adef324efcbc0d048f61b0dd55.jpg"
+    ]
+  },
+  {
+    "id": "nicky-iniciante",
+    "slug": "nicky-iniciante",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/nicky-iniciante-bo0xg20qc/",
+    "city": "Santa Cruz",
+    "title": "Nicky iniciante",
+    "anuncio": "Hola mi amor Soy Nicky y iniciante Tengo 21 años y soy muy complaciente y muy cariñosa Escribime al WhatsApp y te mando mas información y fotos",
+    "whatsapp": "62744539",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/62bad2139298484781c8e23c0b846351.jpg"
+    ]
+  },
+  {
+    "id": "18-anitos-sin-hijos",
+    "slug": "18-anitos-sin-hijos",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/18-anitos-sin-hijos-bo3k26dzr/",
+    "city": "Cochabamba",
+    "title": "18 anitos sin hijos",
+    "anuncio": "Tengo ambiente discreto Tiene garaje Trató de enamorados",
+    "whatsapp": "78303064",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/83530c80c5234ca9868da0f092f48b63.jpg"
+    ]
+  },
+  {
+    "id": "60-desnudito-full-chupaditas-todo-estilito",
+    "slug": "60-desnudito-full-chupaditas-todo-estilito",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/60-desnudito-full-chupaditas-todo-estilito-bo8pzy9on/",
+    "city": "Cochabamba",
+    "title": "60 desnudito full chupaditas todo estilito",
+    "anuncio": "Papacito soy cholita muy bonita d rostro delgada de hermosa sonrisa q t enamorara independiente trato directo estoy en el centro d la ciudad te espero lista para gozar estoy re apretita ven y compruébalo",
+    "whatsapp": "62982878",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/922a7970c7244f1c98b8d2dfe5dff8b7.jpg"
+    ]
+  },
+  {
+    "id": "adriana-jovencita-nueva",
+    "slug": "adriana-jovencita-nueva",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/adriana-jovencita-nueva-bo2hamejw/",
+    "city": "Cochabamba",
+    "title": "Adriana jovencita nueva",
+    "anuncio": "Soy una jovencita linda SUPER CALIENTE LO DISFRUTARÁS Pieza 100bs con ambiente propio Más información al WhatsApp bbe",
+    "whatsapp": "75506577",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/58a17101683b4e719c90d1eb0f92fbc8.jpg",
+      "/images/anuncios/7f7620f3ef5541239dece3d059ca4447.jpg",
+      "/images/anuncios/b86d20f85be247b885006c78f4b2a62a.jpg"
+    ]
+  },
+  {
+    "id": "disponible-solo-por-hoy-culona-tetona-fotos-reales-amor",
+    "slug": "disponible-solo-por-hoy-culona-tetona-fotos-reales-amor",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/disponible-culona-tetona-bo56fojwn/",
+    "city": "Cochabamba",
+    "title": "Disponible solo por hoy culona tetona fotos reales amor",
+    "anuncio": "Sobre mi hola tu escort Kel deliciosa Py dispuesta a complacerte en todo mi trato de novio sexo oral ricas poses paja rusa garganta profunda Todo sin apuros relajado",
+    "whatsapp": "78026581",
+    "precio": 750,
+    "fotos": [
+      "/images/anuncios/6a77c7f493aa432c939f77015bd8563e.jpg",
+      "/images/anuncios/40ce7406a32346599cb2ce723171176f.jpg",
+      "/images/anuncios/c5863e544f6f4a9c96808bcea8946f57.jpg",
+      "/images/anuncios/0d15ab592a7941d7acb0beeea9ac6a13.jpg",
+      "/images/anuncios/6a77c7f493aa432c939f77015bd8563e.jpg",
+      "/images/anuncios/40ce7406a32346599cb2ce723171176f.jpg"
+    ]
+  },
+  {
+    "id": "estefania-ninfomana-aventurera-del-placer-garganta-profunda-disfruta-y-degusta",
+    "slug": "estefania-ninfomana-aventurera-del-placer-garganta-profunda-disfruta-y-degusta",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/estefania-cochabamba-ninfomana-aventurera-del-placer-garganta-profunda-disfruta-y-degusta-bo5ufffpt/",
+    "city": "Cochabamba",
+    "title": "Estefania NINFOMANA Aventurera del Placer Garganta Profunda Disfruta y Degusta",
+    "anuncio": "Hola amor bello me presento soy una hermosa escorts sensual caliente y muy extrovertida simpática dueña de un lindo y caliente trasero que puede ser todo tuyo amor mi deseo es que cuando tengas que irte salgas feliz y encantado de haber disfrutado de un buen sexo a mi lado soy una mujer de tierras calientes y esa calentura recorre mi cuerpo te voy a comer entero amor tengo un cuerpo que podrás recorrer con tus manos ya sabes muy bien que las somos mujeres de sangre caliente y que lo demostramos fácilmente amor deja de pensar en lo que podemos hacer y hazlo realidad a mi lado Llámame o escribe a mi WhatsApp",
+    "whatsapp": "77454171",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/d15868a723de456e8c7da366c33de79a.jpg",
+      "/images/anuncios/4013eaee60534fbaa97240394e2608b4.jpg",
+      "/images/anuncios/4f16b598213543b699386fd9207e3f66.jpg",
+      "/images/anuncios/f0929055dd394ccd92548ae0a4a137bf.jpg",
+      "/images/anuncios/035f126d9d124bd4b023eb7e71e19068.jpg"
+    ]
+  },
+  {
+    "id": "100bs-mariana-bellisima-nuevita-vip-de-19-anos-iniciante",
+    "slug": "100bs-mariana-bellisima-nuevita-vip-de-19-anos-iniciante",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/estudiante-18-anos-100-bs-full-promocion-ambiente-bo1wqj4bm/",
+    "city": "Cochabamba",
+    "title": "100BS MARIANA BELLISIMA NUEVITA VIP de 19 ANOS INICIANTE",
+    "anuncio": "Soy independiente delgada bella carita recién llegadita bien ESTRECHITA y DELICIOSA trato de ENAMORADOS al desnudo total complaciente Ven BB te are el AMOR las veces q tu me pidas y en todas las poses q quieras Travesuras y placer sin límites 100 bs todo incluído no pagas nada extra",
+    "whatsapp": "78194358",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/f4c14554fc80441eaa8fbf83e17d5bb8.jpg",
+      "/images/anuncios/8a03b27025814c51ab53c637fe51c342.jpg"
+    ]
+  },
+  {
+    "id": "liz-18-anitos-flaquita",
+    "slug": "liz-18-anitos-flaquita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/flaquita-independiente-hermosa-18-anitos-bo2u2mvyz/",
+    "city": "Cochabamba",
+    "title": "Liz 18 anitos flaquita",
+    "anuncio": "Hola mi nombre es Liz tengo 18 años acabo de llegar a la ciudad de Cochabamba soy de provincia cualquier consulta a mi WhatsApp soy Blanquita también hago salidas escríbeme a mi WhatsApp",
+    "whatsapp": "75452476",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/eca6bad6fec74838bd17f090d381eeea.jpg",
+      "/images/anuncios/a68f8f66d28042a1a559ff95a7b8afa7.jpg",
+      "/images/anuncios/476cbfa38d2846e4b812dbcc44af4698.jpg",
+      "/images/anuncios/eca6bad6fec74838bd17f090d381eeea.jpg",
+      "/images/anuncios/a68f8f66d28042a1a559ff95a7b8afa7.jpg"
+    ]
+  },
+  {
+    "id": "flaquita-pechugona",
+    "slug": "flaquita-pechugona",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/flaquita-pechugona-bo32dqp7a/",
+    "city": "Cochabamba",
+    "title": "Flaquita Pechugona",
+    "anuncio": "Mis amores Mi servicio es super completito trato de pareja Besos apasionados caricias full colita vaginal oral bien rico Cumplo toda clase de fantasías fetiches Hago qué tú rato sea placentero no dudes en escribirme excelente ubicación tambien hago salidas",
+    "whatsapp": "75643887",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/5f1d9bd3b5ef4561b325761cdbedc0f4.jpg",
+      "/images/anuncios/72816551a0bd4b939e8733e7a65e9bdb.jpg",
+      "/images/anuncios/8f3bc2dc513644e897b2ebf993a7faa7.jpg",
+      "/images/anuncios/f257723bb2df4ef9960fb5c3e8dcb3d2.jpg",
+      "/images/anuncios/a855da3c5ab144929a206d7d49cf43e9.jpg",
+      "/images/anuncios/bf96e2defec242e1b5e03b708ce5588a.jpg",
+      "/images/anuncios/833a8862961e423a9cb8a0d8d95d8623.jpg"
+    ]
+  },
+  {
+    "id": "solo-salidas-sin-limites-gordita-culona",
+    "slug": "solo-salidas-sin-limites-gordita-culona",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/gordita-culona-bo4qx16ns/",
+    "city": "Cochabamba",
+    "title": "Solo salidas sin limites gordita culona",
+    "anuncio": "Soy jazmín una gordita SEXI CULONA CON trato de enamorados Besitos caricias y poses AL desnudo total Sin límites de relación Solo salidas CON oral y vaginal LLÁMAME TE estoy esperando",
+    "whatsapp": "62602093",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/034ef81a984941c689cd906cb8897254.jpg",
+      "/images/anuncios/66d98dcd98af40e6952ea8534f143f41.jpg",
+      "/images/anuncios/0d05f32125724062bca50159b526bb12.jpg"
+    ]
+  },
+  {
+    "id": "luna18anitos-blanquita-cambita",
+    "slug": "luna18anitos-blanquita-cambita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hola-soy-jade-blanquita-bo5ts5wj5/",
+    "city": "Cochabamba",
+    "title": "Luna18anitos blanquita cambita",
+    "anuncio": "Soy una joven de 18 años momentos inolvidables llenos de diversión trato de enamorados Estoy aquí para ofrecerte una compañía auténtica y hacer que cada instante sea especial No importa la hora siempre encontrarás en mí a alguien con quien disfrutar de buenas conversaciones y risas sinceras también hago salidas acabo de llegar a cochabamba",
+    "whatsapp": "78930577",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/477b6f29596d40d6b23ce14f4b8dccca.jpg",
+      "/images/anuncios/8a77b27090284caebfe0e8fb2bb4f0e8.jpg"
+    ]
+  },
+  {
+    "id": "leslie-salidas-hoy",
+    "slug": "leslie-salidas-hoy",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/leslie-salidas-hoy-bo52hq09o/",
+    "city": "Cochabamba",
+    "title": "Leslie salidas hoy",
+    "anuncio": "Hola soy Leslie tengo 19 años Es un gusto conocerte Espero que podamos conversar y compartir ideas me alegra saludarte y tener la oportunidad de presentarme",
+    "whatsapp": "64625998",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/f72e75bed946420cbe7cf2a70b0eebc5.jpg"
+    ]
+  },
+  {
+    "id": "linda-cholita-nueva-cochalita-iniciante",
+    "slug": "linda-cholita-nueva-cochalita-iniciante",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/linda-cholita-nueva-cochalita-iniciante-bo4y4cto8/",
+    "city": "Cochabamba",
+    "title": "Linda cholita nueva cochalita iniciante",
+    "anuncio": "Hola bb soy cholita iniciante muy complacientes hago todo tipo de servicio completo soy jovencita tengo 19 añitos muy cariñosa besadorita de buen cuerpito ven amorcito estoy en cbba mis precios son muy económicos 60bs servicios momentáneo 100bs relación con sexo oral 150bs una hora de promoción 200bs el trio ven amorcito te esperamos no te arrepentiras",
+    "whatsapp": "76447800",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/01c56e6d7e064566ac53e6618f050e2a.jpg",
+      "/images/anuncios/d03401feaac3487887a0c1a9d9525499.jpg",
+      "/images/anuncios/5e8bd1bc95fd44e994ea62011a890360.jpg",
+      "/images/anuncios/417c0be5ca164755861f2a02773d3410.jpg",
+      "/images/anuncios/4ad32fb24d5b41e49acfc63b6726ee24.jpg",
+      "/images/anuncios/af8d7ced3af74b98bb3150794148ee44.jpg"
+    ]
+  },
+  {
+    "id": "linda-cochalita-mini-pollerita-pechos-deliciosos-naturales-apretita-soy-real-piel-suavecita",
+    "slug": "linda-cochalita-mini-pollerita-pechos-deliciosos-naturales-apretita-soy-real-piel-suavecita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/linda-cochalita-mini-pollerita-pechos-deliciosos-naturales-apretita-soy-real-piel-suavecita-bo124756h/",
+    "city": "Cochabamba",
+    "title": "Linda Cochalita Mini pollerita Pechos deliciosos naturales apretita soy real piel suavecita",
+    "anuncio": "Rica conchita de pechos deliciosos tiernita muy complaciente complaciente en todo al desnuditopiel a piel las poses q tú desees apretita También hago extras sinsolo atiendo de día mis fotos son reales visítame",
+    "whatsapp": "74180178",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/4235e65f3b75491c867a2cdf2aff21d7.jpg",
+      "/images/anuncios/50cc99b9c2b84f3781a40ed46212f445.jpg",
+      "/images/anuncios/7fa3e3818f864951a26c63ee79a8e6a0.jpg",
+      "/images/anuncios/789074ef76e544efada2f3caa981fbcc.jpg",
+      "/images/anuncios/2a89e9965ff543a1a6254fa4ba277f12.jpg",
+      "/images/anuncios/e51f2b0fbc794f1493cb1d8193832e8b.jpg"
+    ]
+  },
+  {
+    "id": "varias-cholita-19-anitos",
+    "slug": "varias-cholita-19-anitos",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/lindas-cholitas-sunaj-kullku-jampatitu-bo49b9sqn/",
+    "city": "Cochabamba",
+    "title": "Varias cholita 19 anitos",
+    "anuncio": "Miski cholitas solteritas independientes mana yachajtiyki noga yacharichisgayki tukuy estilitumanta ruarisunchisnoqa kani kacha cholita kany kachamosita misky sapito misky chuchitus jamuy cuartuyman sumajsituta ruarisun miskysituta runtunaricusun tukuy posesituspy kaypi ojllarycusun rejsiwanki chaypi munakuanki gravetapuni arrechita kany gustawan runtuyta precios desde 100bstodo estilo bien atendido hasta la ultoma gotita 200bs la hora completa con todo los servicios que quieras amorcito 100bs servicio completito bien atendido amorcito tengo ambiente propio comodo limpio nadie nos molestara soy independiente horario de atención todo los dias de 7am a 8pm hablame al whatsapp para mas información",
+    "whatsapp": "69502418",
+    "precio": 300,
+    "fotos": [
+      "/images/anuncios/2c1221d312cd4bafb39007035a40ee62.jpg",
+      "/images/anuncios/e5797bef212943dd90d5d82fd37333af.jpg",
+      "/images/anuncios/5b0b623e691a4af9a4e13b9ec1ee3e06.jpg",
+      "/images/anuncios/b4dd41c7ca6e4f17a75bc8638e4f2fd9.jpg",
+      "/images/anuncios/b0d7f21103c242fe8f5ff8d497299abe.jpg",
+      "/images/anuncios/1a9ab692ad094111a66c591defde0edf.jpg",
+      "/images/anuncios/b1981c1f3a904452afdd304f810bfb4a.jpg",
+      "/images/anuncios/bba2ae6b850b49f89499b1980487e667.jpg",
+      "/images/anuncios/2e207b27bd09402d892ce570fdc12072.jpg"
+    ]
+  },
+  {
+    "id": "nalgona-gostosa",
+    "slug": "nalgona-gostosa",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/nalgona-gostosa-bo31ak2kx/",
+    "city": "Cochabamba",
+    "title": "Nalgona Gostosa",
+    "anuncio": "Mor ya en tu ciudad venga a pasar un momento relajante disfruta de mi deliciosa vagina fogoza me encanta en todas las posas suave y duro tírame esa leche papacito aprovecha y háblame",
+    "whatsapp": "60394089",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/856904d9bd4f4cc7ba933eda935aa7e7.jpg"
+    ]
+  },
+  {
+    "id": "relaciones-ilimitadas-200bs-la-hora-full-69-poses-paja-rusa",
+    "slug": "relaciones-ilimitadas-200bs-la-hora-full-69-poses-paja-rusa",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/relaciones-ilimitadas-200bs-la-hora-full-69-poses-paja-rusa-bo99rbd5s/",
+    "city": "Cochabamba",
+    "title": "Relaciones ilimitadas 200bs la hora full 69 poses paja rusa",
+    "anuncio": "200bs LA hora relaciones ilimitadas full 69 oral vaginal poses desnudo total besitos con lengua chupada de tetitas full anal trios atención a parejas lesvianismo paja rusa ambiente propio",
+    "whatsapp": "75377510",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/1c24a36642334fc59601c176f76c20ac.jpg",
+      "/images/anuncios/91ef90521bcf4c9191bfd51fd793930e.jpg",
+      "/images/anuncios/2ca09467286c43118edb6c63fa9dc01c.jpg",
+      "/images/anuncios/34e9dbfec6c54bc5b246125cc761cc31.jpg",
+      "/images/anuncios/36c5c0596ff249ab9e07a5c5093924bc.jpg"
+    ]
+  },
+  {
+    "id": "alto-cambita-tetona-nalgona-hermosa-de-cuerpo-y-rostro-ultimos-dias-en-tu-ciudad",
+    "slug": "alto-cambita-tetona-nalgona-hermosa-de-cuerpo-y-rostro-ultimos-dias-en-tu-ciudad",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/cambita-tetona-nalgona-hermosa-de-cuerpo-y-rostro-ultimos-dias-en-tu-ciudad-bo5a1yjvm/",
+    "city": "El Alto",
+    "title": "alto CAMBITA tetona nalgona hermosa de cuerpo y rostro ultimos dias en tu ciudad",
+    "anuncio": "Cambita muy bonita de piel blanca suave rostro bonito muy complaciente y divertida de tetas grandes nalgas grandes te espero mi amor para pasarla rico promo por último días",
+    "whatsapp": "78145133",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/48682a3305e84b39bf74705e25d5750c.jpg",
+      "/images/anuncios/21068fa61fc8436788e6189bf8a09961.jpg"
+    ]
+  },
+  {
+    "id": "alto-damita-super-ardiente",
+    "slug": "alto-damita-super-ardiente",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/damita-ardiente-bo311l1no/",
+    "city": "El Alto",
+    "title": "alto Damita super ardiente",
+    "anuncio": "Holi bb estoy por final los andes ven a pasar momentos íntimos conmigo",
+    "whatsapp": "62682206",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/31901a58f4944688bd8d3b2574ac9298.jpg"
+    ]
+  },
+  {
+    "id": "alto-damita-complaciente-lo-hacemos-natural-amor",
+    "slug": "alto-damita-complaciente-lo-hacemos-natural-amor",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/damita-complaciente-lo-hacemos-natural-amor-bo8krkjob/",
+    "city": "El Alto",
+    "title": "alto Damita complaciente lo hacemos natural amor",
+    "anuncio": "Hola corazon Escríbeme y coordinamos cita lo vamos a pasar muy bien trato de enamorados y todas las poses Soy una señorita de cuerpo natural También tengo contenido por si estás interesado mor No dudes en escribirme",
+    "whatsapp": "69945719",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/73677025f2b94605b1c6de966bc09b6f.jpg"
+    ]
+  },
+  {
+    "id": "alto-hola-amorcito-nenita-apretadita-mojadita-discreta-carinosa",
+    "slug": "alto-hola-amorcito-nenita-apretadita-mojadita-discreta-carinosa",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hola-amorcito-nenita-apretadita-mojadita-discreta-carinosa-bo6r6am5q/",
+    "city": "El Alto",
+    "title": "alto Hola amorcito nenita apretadita Mojadita Discreta carinosa",
+    "anuncio": "Hola a te lleno de cariño Besitos discreta al desnudo total",
+    "whatsapp": "69725988",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/53d6d4d2c8fd443aadd3800a41d6dd2c.jpg"
+    ]
+  },
+  {
+    "id": "alto-jovencita-iniciante",
+    "slug": "alto-jovencita-iniciante",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/jovencita-iniciante-bo5owrypg/",
+    "city": "El Alto",
+    "title": "alto Jovencita iniciante",
+    "anuncio": "Buenas bb Pasemos un momento De placer cumplamos tus fantasías Más deseadas llenas de placer",
+    "whatsapp": "75669218",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/70a65a79ab6b43c9acda0c62a22462d0.jpg"
+    ]
+  },
+  {
+    "id": "alto-linda-cochalita-madura-mini-pollerita-muy-arrecha-y-complaciente-te-hare-cosas-ricas",
+    "slug": "alto-linda-cochalita-madura-mini-pollerita-muy-arrecha-y-complaciente-te-hare-cosas-ricas",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/linda-cochalita-madura-mini-pollerita-muy-arrecha-y-complaciente-te-hare-cosas-ricas-bo1ay8lse/",
+    "city": "El Alto",
+    "title": "alto Linda cochalita madura mini pollerita muy arrecha y complaciente te hare cosas ricas",
+    "anuncio": "Hola amor ven conmigo y hagamos cosas ricas doy trato de enamorados con besos en la boca desnudo total poses sin límites full y 69 pídeme lo q quieras sin tabúes",
+    "whatsapp": "76399610",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/456e6701d1f648618d604fb8bcd392ab.jpg"
+    ]
+  },
+  {
+    "id": "alto-linda-universitaria-19-anitos-ceja-el-alto",
+    "slug": "alto-linda-universitaria-19-anitos-ceja-el-alto",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/linda-universitaria-19-anitos-ceja-el-alto-bo8yqiedz/",
+    "city": "El Alto",
+    "title": "alto Linda universitaria 19 anitos ceja el alto",
+    "anuncio": "Hola amor mi fotos son reales estoy en ceja el alto villa dolores ven a conocerme buen servicio un promo si me haces venir servicio gratis",
+    "whatsapp": "78794061",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/44cfb8768dea4f6fa9fd8eeceb069fe0.jpg",
+      "/images/anuncios/c7801d7ecddf401292eb1bad534f5db9.jpg",
+      "/images/anuncios/e36fc243304a45e9ad885a48f9cd95f3.jpg",
+      "/images/anuncios/62d1b41054cb409bbc27714593ba3475.jpg",
+      "/images/anuncios/5fa2f54103a040e4b2fbc680f33730f2.jpg"
+    ]
+  },
+  {
+    "id": "alto-mary-bell-19-anos-foto-real-y-actual-en-upea-y-juana-azurduy-atencion-vip",
+    "slug": "alto-mary-bell-19-anos-foto-real-y-actual-en-upea-y-juana-azurduy-atencion-vip",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/mary-bell-19-anos-foto-real-en-upea-y-juana-azurduy-bo525jpss/",
+    "city": "El Alto",
+    "title": "alto MARY BELL 19 ANOS FOTO REAL Y ACTUAL EN UPEA Y JUANA AZURDUY ATENCION VIP",
+    "anuncio": "Holi amor hoy estare toda la tarde en la UPEA y si quieres verme en acción tengo mis videos en el alojamiento",
+    "whatsapp": "77867996",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/f47b7fa991cb440da0379f69e1b9b687.jpg"
+    ]
+  },
+  {
+    "id": "alto-oli-me-anime-el-dia-de-hoy-hacer-salidas-por-la-ceja-soy-nueva-en-el-rulo",
+    "slug": "alto-oli-me-anime-el-dia-de-hoy-hacer-salidas-por-la-ceja-soy-nueva-en-el-rulo",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/oli-me-anime-el-dia-de-hoy-hacer-salidas-por-la-ceja-soy-nueva-en-el-rulo-bo399kcf9/",
+    "city": "El Alto",
+    "title": "alto Oli me anime el dia de hoy hacer salidas por la ceja soy nueva en el rulo",
+    "anuncio": "El día de hoy me anime hacer salidas por la ceja soy nueva en esto estoy estrechita y muy bonita soy atenta y tierna",
+    "whatsapp": "69141342",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/2d6ad5f77d7a46fab4a85964773312a7.jpg",
+      "/images/anuncios/17681d11a32f485e94b176d3b9624ab4.jpg",
+      "/images/anuncios/eaa6052217784b43b1ad745e776f03b3.jpg",
+      "/images/anuncios/fb55d23489fe467d98b21915133a49e3.jpg"
+    ]
+  },
+  {
+    "id": "alto-reinita-cielo-de-19-anos",
+    "slug": "alto-reinita-cielo-de-19-anos",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/reinita-cielo-de-19-anos-bo4h8kej2/",
+    "city": "El Alto",
+    "title": "alto Reinita Cielo de 19 anos",
+    "anuncio": "Reina Cielo de pechos grandes amor curvas y super prietita ven que te are ver el cielo estoy super fogosa estoy sexi mis fotos lo dirán el trato que te ofrezco es de enamorados mi rey",
+    "whatsapp": "62665124",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/ca2079a2bb484c4cbbf65a0d9ba0c31e.jpg",
+      "/images/anuncios/d6ec358e9a7a47f8b2efa285e76fd64e.jpg",
+      "/images/anuncios/c4da8d483f7f4206b75aabe7380e09b3.jpg"
+    ]
+  },
+  {
+    "id": "alto-rica-apretadita-nueva-soy-de",
+    "slug": "alto-rica-apretadita-nueva-soy-de",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/rica-apretadita-nueva-soy-de-sucre-bo1uwqrcn/",
+    "city": "El Alto",
+    "title": "alto RICA APRETADITA NUEVA Soy de",
+    "anuncio": "Amorcito estoy solo por hoy en la ceja Nos calentarnos juntos tengo frío soy de Sucre",
+    "whatsapp": "78283948",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/06493eb59cd44c74b2f400a1550c8711.jpg"
+    ]
+  },
+  {
+    "id": "alto-solamente-hoy-hare-citas-bb-animate-bb",
+    "slug": "alto-solamente-hoy-hare-citas-bb-animate-bb",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/solamente-hoy-hare-citas-bb-animate-bb-bo2nvngtf/",
+    "city": "El Alto",
+    "title": "alto Solamente hoy hare citas bb animate bb",
+    "anuncio": "Me llamo Aylin tengo un muy buen cuerpo necesito dinero para hoy mismo 3O0 bs la hora con pre hago extra sin me escribes para coordinar bb",
+    "whatsapp": "62274516",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/9ef02d80a2b645e9be09265e7082cc42.jpg"
+    ]
+  },
+  {
+    "id": "alto-universitaria-sexy-19",
+    "slug": "alto-universitaria-sexy-19",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/universitaria-sexy-19-bo1n6d60d/",
+    "city": "El Alto",
+    "title": "alto UNIVERSITARIA SEXY 19",
+    "anuncio": "Holi soy Yurid bebe tengo 19 añitos cumplidos soy nueva en el ambiente pero te daré lo mejor de mi realizo extras sms respondo rápido amor",
+    "whatsapp": "62786447",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/50b66c0806c14b69b40d1cd6bd59d2ab.jpg"
+    ]
+  },
+  {
+    "id": "alto-complaciente-de-principio-a-fin-servicio-completo-bb",
+    "slug": "alto-complaciente-de-principio-a-fin-servicio-completo-bb",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/ven-a-disfrutar-de-un-delicioso-mananero-soy-una-excelente-compania-bo7cgjkve/",
+    "city": "El Alto",
+    "title": "alto COMPLACIENTE DE PRINCIPIO A FIN SERVICIO COMPLETO BB",
+    "anuncio": "Hola cariño soy una señorita apasionada y discreta lista para hacer realidad tus sueños más íntimos Te ofrezco un refugio íntimo y acogedor donde podrás relajarte y disfrutar Cumplo cada uno de tus deseos con dedicación y entusiasmo MIS SERVICIOS Sexo oral Poses a tu gusto Trato de novios Besos y caricias Masajes relajantes MIS TARIFAS 1HORA 240 30 Minutos 180 15 Minutos 130 TODO CON PROTECCIÓN Estoy cerca a la plaza Juana Azurduy te espero MI AMOR SOY INDEPENDIENTE",
+    "whatsapp": "62578278",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/0fcb904238de436fa618552fb4fe9766.jpg",
+      "/images/anuncios/023c0474167d4e1b9366d903d9c767bf.jpg",
+      "/images/anuncios/33289a9a0a2c421e82fc3f1a889c50d4.jpg",
+      "/images/anuncios/826fe80d880f4956971fe7dee53e56b2.jpg"
+    ]
+  },
+  {
+    "id": "juventud-y-pasion-en-cada-instante-contigo",
+    "slug": "juventud-y-pasion-en-cada-instante-contigo",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/19-primaveras-magia-pura-y-noches-de-ensueno-bo5wfyire/",
+    "city": "La Paz",
+    "title": "Juventud y pasion en cada instante contigo",
+    "anuncio": "A mis 19 años cada encuentro es una nueva aventura llena de emociones y sorpresas No creo en lo predecible prefiero dejar que la espontaneidad y la conexión entre nosotros marquen el camino Me encanta reír explorar tus deseos y descubrir juntos lo que nos hace vibrar Conmigo todo es natural desde una conversación llena de complicidad hasta esos momentos de silencio que dicen más que mil palabras Me gusta jugar con las sensaciones provocar tus sentidos y dejar que el tiempo vuele sin que lo notes Cada cita es una oportunidad para crear algo único donde lo importante es disfrutar sin presiones ni reglas Lo que ofrezco - Un espacio donde puedas ser tú mismo sin juicios ni apariencias - Una conexión auténtica donde cada mirada y cada roce tienen un significado especial - Caricias que despiertan emociones como si cada toque fuera el primero - La seguridad de que lo que vivamos quedará entre nosotros como un secreto compartido Si buscas una experiencia llena de diversión complicidad y momentos que te hagan sentir especial aquí me tienes Permíteme ser parte de tu noche y juntos crearemos recuerdos que llevarás contigo",
+    "whatsapp": "76082413",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/fe90a9b3ab7949f39bc39e716dce5a45.jpg",
+      "/images/anuncios/6fcc9d43af8e4ac7898c27556b53f4d4.jpg",
+      "/images/anuncios/10725538208547f4b7d41dc262c7ae5a.jpg"
+    ]
+  },
+  {
+    "id": "carita-de-angel-hermosa-para-hombres-exigentes18-bb",
+    "slug": "carita-de-angel-hermosa-para-hombres-exigentes18-bb",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/carita-de-angel-hermosa-para-hombres-exigentes18-bb-bo7gmu3wu/",
+    "city": "La Paz",
+    "title": "Carita de angel hermosa para hombres exigentes18 bb",
+    "anuncio": "Amor soy real servicio garantizado hermosa de rostro y de cuerpo blancona sin apuros y las veces que puedas terminar ven a desestresarte a mi lado cariño te aseguro un servicio lleno de cariño y mucho amor y sobre todo placer Tengo depa vida",
+    "whatsapp": "60586032",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/ce16e593b85a42848a84bae4f27858d1.jpg"
+    ]
+  },
+  {
+    "id": "t-a-r-i-j-e-n-i-t-a-la-magia-de-lo-inesperado",
+    "slug": "t-a-r-i-j-e-n-i-t-a-la-magia-de-lo-inesperado",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/descubreoo-momentos-que-roban-el-aliento-bo1gld1dv/",
+    "city": "La Paz",
+    "title": "T-A-R-I-J-E-N-I-T-A- La magia de lo inesperado",
+    "anuncio": "Imagina una noche donde cada instante se convierte en una aventura donde no hay reglas solo el placer de descubrirnos sin prisas Tengo 19 años y una energía que contagia lista para hacerte vivir algo que recordarás por mucho tiempo No soy de esas que se quedan en lo superficial me gusta profundizar conectar contigo de una manera que te haga sentir especial como si el mundo entero desapareciera y solo quedáramos nosotros Me encanta reír explorar tus fantasías y crear momentos que te hagan olvidar todo lo demás En La Paz estoy aquí para ofrecerte una experiencia donde lo sensual y lo auténtico se mezclan donde cada caricia cada palabra y cada mirada están pensadas para despertar algo nuevo en ti No busco un guion prefiero dejar que la química fluya y sorprenderte con gestos que no esperabas Quiero que te sientas deseado que cada segundo a mi lado sea un escape de lo cotidiano Si estás listo para dejarte llevar y disfrutar de una noche llena de complicidad y pasión aquí me tienes esperando por ti",
+    "whatsapp": "69797331",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/bf76802800bf4c7f873851dd418e4443.jpg",
+      "/images/anuncios/1cc9731c7f564772a2d53f271b119bb1.jpg",
+      "/images/anuncios/c315efa4df6345da93cef461acbf3de6.jpg",
+      "/images/anuncios/bf76802800bf4c7f873851dd418e4443.jpg",
+      "/images/anuncios/1cc9731c7f564772a2d53f271b119bb1.jpg"
+    ]
+  },
+  {
+    "id": "n-u-e-v-i-t-a-juventud-pasion",
+    "slug": "n-u-e-v-i-t-a-juventud-pasion",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/encantadora-bo3v8mb5e/",
+    "city": "La Paz",
+    "title": "N-u-e-v-i-t-a juventud pasion",
+    "anuncio": "A mis 19 años he descubierto que la magia de un encuentro no está en lo que se planea sino en lo que surge sin aviso En esta ciudad donde el aire es ligero pero las emociones pesan te invito a vivir algo que va más allá de lo común No soy de esas que repiten lo mismo una y otra vez prefiero dejar que cada momento sea único donde lo inesperado se convierte en lo más emocionante Aquí no hay reglas solo la libertad de explorar lo que sentimos en el instante sin filtros ni máscaras Me encanta la idea de que dos personas se encuentren sin saber exactamente qué pasará donde cada caricia cada palabra y cada silencio tengan un significado especial No busco seguir un libreto busco crear algo que los dos recordemos donde la complicidad y el respeto sean tan naturales como el deseo Si lo que buscas es algo que te haga sentir vivo algo que te saque de la rutina y te haga vibrar aquí estoy Te ofrezco risas que contagian miradas que hablan y esa sensación de que cuando estamos juntos el mundo parece detenerse No es solo un momento es una experiencia que quedará grabada en tu memoria algo que recordarás mucho después de que nuestros caminos se separen Te animas a descubrir lo que puede nacer entre nosotros sin límites ni expectativas",
+    "whatsapp": "68179341",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/2dd8c8f41c8f405dbffffb7e600be175.jpg",
+      "/images/anuncios/7c8e536deb154ad293af40ab29ec543d.jpg",
+      "/images/anuncios/ba86e13c75764b49b60a0ad2586ad6d1.jpg"
+    ]
+  },
+  {
+    "id": "real-estudiante-inciante-flakita-blanquita-18-anitos",
+    "slug": "real-estudiante-inciante-flakita-blanquita-18-anitos",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/estudiante-con-fotos-reales-inciante-18-anitos-bo789xxx2/",
+    "city": "La Paz",
+    "title": "Real Estudiante inciante Flakita BLANQUITA 18 anitos",
+    "anuncio": "Ven a sentir el mejor placer de tu vida al lado de una muñeca real Flakita BLANQUİTA recorre mi cuerpo como si fuera autopista y aterriza en mi amiguitavivamos el mejor momento vida Sin estafas ni engaños lo que ves es lo que encontraras",
+    "whatsapp": "75742688",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/e5d8ed3996a149fbbe0c626872bf700a.jpg",
+      "/images/anuncios/48d7b29d9df64c4482293cc4973de44d.jpg",
+      "/images/anuncios/50f7a94451a34f2eb91f65d3ce067153.jpg"
+    ]
+  },
+  {
+    "id": "lunes-de-mananero-culona-kinesiologa",
+    "slug": "lunes-de-mananero-culona-kinesiologa",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hermosa-culona-kinesiologa-bo4jpchnw/",
+    "city": "La Paz",
+    "title": "Lunes de mananero culona kinesiologa",
+    "anuncio": "Hola soy una hermosa señorita de ojitos claros piel trigueña CULONA TODO REAL te espero tal cual mi amor vientre planito muy complaciente INDEPENDIENTE Ven a disfrutar un momento inolvidable y delicioso no te arrepentiras REVISA LAS FOTITOS a detalle no ago videollamadas ni envío videos ni fotos todo está acá NO REALIZO ANAL",
+    "whatsapp": "78510192",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/7c3e531db42c4286aca833c398fc6df3.jpg",
+      "/images/anuncios/50f35e88de4b4f31817fe65f860f578a.jpg",
+      "/images/anuncios/cb871336f4284607a0962d648b9bb5a9.jpg",
+      "/images/anuncios/33d4d736c5ac4c1ca1f86ddc3fe62307.jpg",
+      "/images/anuncios/7ba3636e6c75426da6d539e9639db7e6.jpg"
+    ]
+  },
+  {
+    "id": "nuevita-recien-llegada-amor",
+    "slug": "nuevita-recien-llegada-amor",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hermosa-iniciante-recien-llegada-bonita-de-18-anos-reales-bo34t5c1r/",
+    "city": "La Paz",
+    "title": "Nuevita recien llegada amor",
+    "anuncio": "Hola mi amor soy una bella señorita de 18 años reales",
+    "whatsapp": "75355432",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/80bb6df9e7164a93b4e5e7ba9ff383fc.jpg"
+    ]
+  },
+  {
+    "id": "hermosa-munequita",
+    "slug": "hermosa-munequita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hermosa-munequita-dulce-solo-salidas-bo39ftddk/",
+    "city": "La Paz",
+    "title": "Hermosa MUNEQUITA",
+    "anuncio": "Hola mor deseo pasar unos deliciosos momentos contigo soy una hermosa nena blanconsita flaquita carita de muñequita y un lindo cuerpo solo realizo salidas cerca el centro sopocachi y zona sur si realmente estas interesado escríbeme",
+    "whatsapp": "78362453",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/754ef16d04df42bb8987a4ba3317dfa6.jpg",
+      "/images/anuncios/761b48f550734020b0178df98c4cf599.jpg",
+      "/images/anuncios/0b0112ef95e342ff85beb9720c83dc9a.jpg",
+      "/images/anuncios/c5bed731e97b403098209ce27d2b05e9.jpg"
+    ]
+  },
+  {
+    "id": "-soy-una-preciosa-universitaria-de-20-anos-disponible",
+    "slug": "-soy-una-preciosa-universitaria-de-20-anos-disponible",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/la-magia-de-19-anos-bo8b1ez6w/",
+    "city": "La Paz",
+    "title": "---soy una preciosa universitaria de 20 anos disponible",
+    "anuncio": "La Paz tiene un ritmo que no se compara y yo soy la melodía que te invita a bailar sin reglas ni horarios A mis 19 años cada encuentro es una oportunidad para explorar lo que realmente te hace sentir sin prisas ni convenciones Me encanta crear momentos donde lo espontáneo se convierte en algo memorable donde cada detalle cuenta y cada caricia escribe una página nueva en tu historia No busco lo ordinario prefiero sumergirme en lo que te apasiona en lo que te hace perder la noción del tiempo y convertirlo en una experiencia que solo tú y yo podamos entender Aquí no hay scripts solo la libertad de dejar que nuestros deseos marquen el camino Si quieres descubrir cómo la juventud y la intensidad pueden convertir una noche en algo que recordarás por siempre déjame ser tu guía en este viaje sin límites",
+    "whatsapp": "77026979",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/b57dbf76e82a4c58abe837e3532024f5.jpg",
+      "/images/anuncios/67eaf60f36b14387a1a62837e198eb74.jpg",
+      "/images/anuncios/5f4015e1a65e4054940c6400271b0e93.jpg"
+    ]
+  },
+  {
+    "id": "la-mas-golosita-saca-leche",
+    "slug": "la-mas-golosita-saca-leche",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/la-mas-golosita-saca-leche-bo7my1x28/",
+    "city": "La Paz",
+    "title": "La mas golosita saca leche",
+    "anuncio": "Escort que te brinda un trato muy amable cariñosa y educada si te consideras un gran amante de los buenos culos entonces soy la indicada para ti Nuestra cita será exquisito momento de puro placer puedo hacerte un delicioso masaje besos seductores y provocativos y claro tendrás el mejor sexo de toda tu vida",
+    "whatsapp": "77113752",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/34370390487c45de8ff5ddd1cf9e30e7.jpg",
+      "/images/anuncios/bb8839b97b994643983da7728526188b.jpg",
+      "/images/anuncios/ba719c70038f495889af210953f00e13.jpg"
+    ]
+  },
+  {
+    "id": "linda-frescura-amor",
+    "slug": "linda-frescura-amor",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/la-paz-en-llamas-bo33k3n5j/",
+    "city": "La Paz",
+    "title": "Linda Frescura Amor",
+    "anuncio": "A mis 19 años la vida en La Paz es como un lienzo en blanco y cada día pinto algo nuevo con los colores de la espontaneidad y la pasión No soy de esas que planean cada detalle prefiero dejar que el momento nos guíe que las risas fluyan sin razón y que la conexión entre nosotros se construya sin prisas Aquí entre las montañas y el cielo te ofrezco algo más que un encuentro una experiencia genuina donde lo único que importa es el ahora Me encanta explorar probar sabores nuevos bailar al ritmo de la música que nos inspire y disfrutar de la compañía sin más reglas que las que nosotros mismos creemos No busco perfección sino autenticidad esa chispa que hace que todo valga la pena Si quieres vivir algo diferente sin máscaras ni expectativas aquí estoy lista para descubrir juntos lo que el destino tiene preparado Sin compromisos sin guiones solo dos almas disfrutando del presente Listo para escribir una historia que solo nosotros entendamos",
+    "whatsapp": "78656255",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/aa34f02daaaa46a4b1dd59a1a7e53cda.jpg",
+      "/images/anuncios/56119cccc4c747b9bfcce2429f758a40.jpg"
+    ]
+  },
+  {
+    "id": "19-bebesita",
+    "slug": "19-bebesita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/lapazena-de-mis-sueno-bo74l5rjm/",
+    "city": "La Paz",
+    "title": "19 Bebesita",
+    "anuncio": "La Paz a mis 19 años es un lienzo en blanco que pinto con cada paso que doy Soy de esas personas que cree que la vida se disfruta mejor cuando te dejas llevar por lo inesperado cuando el plan es no tener plan y cada día se convierte en una nueva historia Me encanta perderme entre los colores de la feria de Alasitas sentir el viento frío en mi rostro mientras subo al teleférico con la ciudad a mis pies y quedarme hasta tarde en esos lugares donde la música suena tan fuerte que no puedes evitar bailar No busco nada superficial quiero conexiones que dejen huella risas que resuenen en la memoria y momentos que se sientan como un refugio en medio del caos Si te gusta la idea de explorar sin prisas de probar ese anticucho que huele tan bien en la esquina o de sentarte en un café a observar a la gente pasar aquí me tienes Desde un atardecer en el Valle de la Luna hasta una noche de juegos de mesa en un bar escondido me gusta crear experiencias que no se olvidan No hay reglas solo ganas de vivir algo real y diferente Listo para descubrir lo que La Paz tiene para ofrecer pero a mi manera",
+    "whatsapp": "77713980",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/0200fcf58e22418f871a2adcd9c6419e.jpg",
+      "/images/anuncios/1387d932419346e6bd16307755979cde.jpg",
+      "/images/anuncios/eb9d508624654be6b8fac44737cddd9f.jpg"
+    ]
+  },
+  {
+    "id": "momentos-llenos-de-complicidad-salubridad-e-higiene-crucena-delgadita-real-y-natural-con-ambiente-pr",
+    "slug": "momentos-llenos-de-complicidad-salubridad-e-higiene-crucena-delgadita-real-y-natural-con-ambiente-pr",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/momentos-llenos-de-complicidad-salubridad-e-higiene-crucena-delgadita-real-y-natural-con-ambiente-y--bo2tkt80i/",
+    "city": "La Paz",
+    "title": "MOMENTOS LLENOS DE COMPLICIDAD SALUBRIDAD e HIGIENE CRUCENA DELGADITA real y natural con ambiente propio tambien salidas",
+    "anuncio": "Conocerás a una mujer bonita divertida amena locuaz y detallista Me encanta disfrutar de cada momento y hacer que cada encuentro sea inolvidable cuando conozco hombres discretos cultos delicados y sobre todo pulcros con su cuerpo e imagen personal ya que mi persona es súper higiénica Valoro la salud fundamentalmente por esa razón cuento con carnet sanitario análisis médicos al día para que cuando nos encontremos te sientas seguro Físicamente soy delgadita de tez blanca con un rostro divino ojos risueños labios carnosos y un cabello naturalmente crespo Todas las fotos de mis publicaciones son mías y son reales te espero con cualquiera de las vestimentas de mis anuncios Dentro de mis servicios te ofrezco la relación oral vaginal con preservativo besos requisito higiene bucal caricias poses y para tus días de rutina o estrés te regalo un delicioso masaje relajante descontracturante para tu sanación energética las sentirás al tocarte Como plus y si deseas al inicio también puedo complacerte con un baile lleno de sensualidad Atiendo en mi departamento y realizando salidas desde las 900 am hasta las 1000 pm A partir de las 1100 pm únicamente salidas Mi espacio es acogedor limpio calefaccionado y bien iluminado ubicado por la Avenida Arce en la zona San Jorge Las salidas las realizo a hotel motel o departamento previa reserva de hora El pago es en efectivo Comunícate conmigo en persona te mandaré toda la información de mi asistencia como escort masajista Conmigo encontrarás una compañía genuina tierna y llena de personalidad Ven y descúbreme",
+    "whatsapp": "75772300",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/ae6a83ed933c48c4b45d8d5e37065d8c.jpg",
+      "/images/anuncios/5ba11234954846b59bfb4ad25609089b.jpg",
+      "/images/anuncios/fe57f0b05d5e44ce93799dddc26928a1.jpg",
+      "/images/anuncios/43900bc0d80c4382b6e1a45c5aa485ff.jpg",
+      "/images/anuncios/0e2a05f52aab435d93e9f421cf270757.jpg"
+    ]
+  },
+  {
+    "id": "full-colitapaula-colombiana",
+    "slug": "full-colitapaula-colombiana",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/paula-colombiana-bo07ehy9u/",
+    "city": "La Paz",
+    "title": "FULL ColitaPAULA COLOMBIANA",
+    "anuncio": "HOLA CHICOS ESTOY DISPUESTA A CUMPLIR TODAS TUS FANTASIAS Y DESEOS SEXUALES SIN EXCUSAS VEN A CONOCERME Y DISFRUTA RICOS MOMENTOS APASIOANDOS CON BESOS REALES Y ORALMUTUO ME MOJO COMPLETA Y ME ÉXITO RÁPIDO VEN CORAZÓN NO ME DEJES CON GANAS Todas mis fotos son 100 real",
+    "whatsapp": "78267098",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/5b790c90fc8541c4a1f29e201c711acc.jpg",
+      "/images/anuncios/ba3030fa34c441fa96f948f567770dda.jpg",
+      "/images/anuncios/8371326dcae141adb7db70518bb73465.jpg",
+      "/images/anuncios/83897bf96ca64c74a572ec0f0e7e97d8.jpg",
+      "/images/anuncios/7433d822e0c0474c87a7cc302bfc331d.jpg",
+      "/images/anuncios/ba458cbea88e4a639f85e78da7881081.jpg",
+      "/images/anuncios/35e80c0bda654c2bbd7bb6d2ed6a66d5.jpg"
+    ]
+  },
+  {
+    "id": "plaza-triangular-flaca-bonita-de-senos-grandes-mis-fotos-son-reales-trato-de-novia-ov-ardiente-e-ins",
+    "slug": "plaza-triangular-flaca-bonita-de-senos-grandes-mis-fotos-son-reales-trato-de-novia-ov-ardiente-e-ins",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/plaza-triangular-bella-estudiante-trato-de-novios-bonit-tiern-y-educad-cuento-con-departamento-vip-bo74kmyca/",
+    "city": "La Paz",
+    "title": "Plaza Triangular FLACA BONITA de SENOS GRANDES MIS FOTOS SON REALES TRATO DE NOVIA OV ARDIENTE E INSACIABLE",
+    "anuncio": "Contáctate mi amor para un servicio desestresante te espero soy una señorita muy ardiente caliente en la cama dispuestas a brindarte el mejor sexo de tu vidasolo contáctate no vas a arrepentirte de este servicio ardiente te sacaré toda la leche que llevas dentro un servicio totalmente higiénico y discreto",
+    "whatsapp": "62534270",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/8f19c8d7fa764d418ba39a7531d1e118.jpg",
+      "/images/anuncios/5c87994714cf425a8e5f6f8677dd69b1.jpg",
+      "/images/anuncios/37ef2967745d4b54ab1457936a10fbd3.jpg"
+    ]
+  },
+  {
+    "id": "130bs-12hora",
+    "slug": "130bs-12hora",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/una-damita-hermosa-curvilinea-de-atencion-24-horas-excelente-trato-tengo-mi-departamento-privado-mi--bo9laylfm/",
+    "city": "La Paz",
+    "title": "130bs 1/2hora",
+    "anuncio": "excelente trato tengo mi departamento privado mi vida ven y pasaremos un momento inolvidable mi amor",
+    "whatsapp": "75899202",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/8cd0899457dd4b55825589f31a588797.jpg"
+    ]
+  },
+  {
+    "id": "servicio-completo-oral-poses-masajes-besos-reales-trato-pololo-soy-la-de-la-foto-21anos",
+    "slug": "servicio-completo-oral-poses-masajes-besos-reales-trato-pololo-soy-la-de-la-foto-21anos",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/anahi-servicio-completo-oral-poses-masajes-besos-reales-trato-pololo-soy-la-de-la-foto-21anos-bo1enqar9/",
+    "city": "Santa Cruz",
+    "title": "servicio completo oral poses masajes besos reales trato pololo soy la de la foto 21anos",
+    "anuncio": "te espero para demostrarte lo que es el verdadero placer No te arrepentirás cada segundo a mi lado será una aventura que desearás repetir No seas tímido atrévete a vivir algo diferente Puedes comunicarte conmigo directamente a mi WhatsApp para agendar nuestro momento Además no te preocupes por nada cuento con un lugar totalmente discreto y seguro para que solo te concentres en disfrutar de mí y de todo lo que te tengo preparado",
+    "whatsapp": "76326647",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/2b1f8497c1db4588a6941dbc1760b192.jpg",
+      "/images/anuncios/1dd02d14de744ae9aa5f8a153d189220.jpg",
+      "/images/anuncios/6348a0ab7a2d4e50a76131333f67803c.jpg",
+      "/images/anuncios/d90c311b5494418f8e884bb0f5b7ce96.jpg",
+      "/images/anuncios/f288c1dfd8d941948752d739ffc698cc.jpg",
+      "/images/anuncios/b5df9bb82bad4574b36a3dde74e7f002.jpg",
+      "/images/anuncios/53f269ce23b14bafbd0c68405392a15e.jpg"
+    ]
+  },
+  {
+    "id": "thalia-disponible-n-mi-apartameno",
+    "slug": "thalia-disponible-n-mi-apartameno",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/carol-thalia-estamos-disponibles-en-nuestro-apartamentosuper-discreto-eh-independiente-puedes-venir--bo4an23cl/",
+    "city": "Santa Cruz",
+    "title": "THALIA disponible n mi apartameno",
+    "anuncio": "Disponible super linda sexi y sobre todo complaciente",
+    "whatsapp": "78496392",
+    "precio": 300,
+    "fotos": [
+      "/images/anuncios/da5ad32456044ad09d3e7dac595684fe.jpg",
+      "/images/anuncios/ee716332c4894d5ea25f78f438140c66.jpg",
+      "/images/anuncios/da5ad32456044ad09d3e7dac595684fe.jpg",
+      "/images/anuncios/ee716332c4894d5ea25f78f438140c66.jpg"
+    ]
+  },
+  {
+    "id": "rica-y-deliciosa-mujer-caliente-llego-para-complacer-todas-tus-fantasias-sexuales-a-la-puerta-de-tu-",
+    "slug": "rica-y-deliciosa-mujer-caliente-llego-para-complacer-todas-tus-fantasias-sexuales-a-la-puerta-de-tu-",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/chloe-soy-una-mujer-sexy-que-te-ahora-gozar-al-maximo-miamor-bo2y3uyqd/",
+    "city": "Santa Cruz",
+    "title": "Rica y deliciosa mujer caliente llego para complacer todas tus fantasias sexuales a la puerta de tu casa Tambien tengo m",
+    "anuncio": "Hola mi Rey soy una sexy joven de 20 añitos esperando por ti me encanta hacer el amor y gritar como loca de tanta excitación que me causa hacerlo necesito que me tomes y me hagas tuya una y otra vez quiero que me hagas sentir el fuego de la pasión y yo te hare mis mejores movimientos te sacare conejos de tanto moverme como una licuadora Me fascina cumplir fantasías y hacer juegos o bailecitos eróticos puedo recibirte si gustas con unos ricos masajes y luego hacerte una garganta profunda",
+    "whatsapp": "62628957",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/e1b3175976994a4c9b2aa6fdc62b2ade.jpg",
+      "/images/anuncios/ed00dd89f5444734beaca523e045d8be.jpg",
+      "/images/anuncios/8f000ffc540146c487babb7eb12ca977.jpg",
+      "/images/anuncios/9a21ca47b61444da86532b7d1d9c0500.jpg",
+      "/images/anuncios/198c0e26193a4aecac3d2ee0a26a36b7.jpg",
+      "/images/anuncios/017d247433a1496c8a7891d048027791.jpg"
+    ]
+  },
+  {
+    "id": "nena-fittnes-sin-apuros",
+    "slug": "nena-fittnes-sin-apuros",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/disfruta-con-una-chica-picara-y-traviesa-sin-apuros-bo9o6fgxr/",
+    "city": "Santa Cruz",
+    "title": "Nena fittnes SIN APUROS",
+    "anuncio": "Hola amor soy una nena dispuesta a cumplir tus fantasías Con mi vagina apretada y ganas de follar haremos varias poses Tómame en tus brazos como desees y seré tu niña preferida dándote el mejor trato posible Soy muy cariñosa y atiendo a caballeros Realicemos tus fantasías ponte en mis manos y te dejaré complacido Escríbeme para agendar citas Horario de lunes a sábado de 9 AM a 5 PM",
+    "whatsapp": "77979421",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/d656b07b79544476ba4a4543f5b95b23.jpg",
+      "/images/anuncios/55160561c58645b5bdd8d09cfca1b905.jpg",
+      "/images/anuncios/4ecad5e079294d62bfeadb23465475e8.jpg",
+      "/images/anuncios/6652a718bdc147bca7d0f4227413002b.jpg"
+    ]
+  },
+  {
+    "id": "dama-de-compania-exclusiva-solo-solventes",
+    "slug": "dama-de-compania-exclusiva-solo-solventes",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/foto-100-real-contenidos-sexuales-video-llamada-hot-bo6t5oe2w/",
+    "city": "Santa Cruz",
+    "title": "Dama de compania exclusiva solo solventes",
+    "anuncio": "Mujer muy sexual mi amor llamame o whatsapp soy una diosa con departamento privado y también realiza salidas",
+    "whatsapp": "62723650",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/7e302174b5b64ee0a4afdbe42f898812.jpg",
+      "/images/anuncios/836ff13ffb1446da94e29410afeee214.jpg",
+      "/images/anuncios/e82f45fce63d402f8d85373103df2f58.jpg"
+    ]
+  },
+  {
+    "id": "flaquita-beniana-180-la-hora-solo-por-hoy-aprovecha-beniana-para-pasarlo-rico",
+    "slug": "flaquita-beniana-180-la-hora-solo-por-hoy-aprovecha-beniana-para-pasarlo-rico",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/gran-promo-la-hora-180-bs-solo-por-hoy-aprovecha-bb-flaquita-arrecha-bo5yeuqwi/",
+    "city": "Santa Cruz",
+    "title": "FLAQUITA beniana 180 la hora solo por hoy aprovecha beniana PARA PASARLO RICO",
+    "anuncio": "Hola bb soy una flaquita muy arrecha y juguetona estoy a tu deceos y fantasías q quieras estaré libre todo el día no dudes en hablarme",
+    "whatsapp": "78373872",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/b4150cc682774e4fa5e2850f1e6eb2d5.jpg",
+      "/images/anuncios/8470a695b3e54d07a6f9e3968eb4102a.jpg",
+      "/images/anuncios/fbed4718f43245a78ff5ab36f21ca761.jpg",
+      "/images/anuncios/d7c323fda7da493ebf3d658257965ad5.jpg",
+      "/images/anuncios/5efd6a9625d34119a846a6d3c24dc13a.jpg"
+    ]
+  },
+  {
+    "id": "hola-bebe-somos-dos-amigas-independientes-con-lugar-comodo-para-pasar-un-exelente-momento-q-te-quita",
+    "slug": "hola-bebe-somos-dos-amigas-independientes-con-lugar-comodo-para-pasar-un-exelente-momento-q-te-quita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hola-bebe-somos-dos-amigas-independientes-con-lugar-comodo-para-pasar-un-exelente-momento-y-te-vayas-bo4bmuhe2/",
+    "city": "Santa Cruz",
+    "title": "Hola bebe somos dos amigas independientes con lugar comodo para pasar un exelente momento q te quitara el stress sexo di",
+    "anuncio": "Lugar limpio tengo garaje aire acondicionado todo lo que necesites comparte con Migo un momento de placer",
+    "whatsapp": "62271766",
+    "precio": 350,
+    "fotos": [
+      "/images/anuncios/d7228facd5044b65a4bf39add560812e.jpg",
+      "/images/anuncios/ac6e2c06b4b54385851f57651a6345a8.jpg",
+      "/images/anuncios/9b70dcfe93b64c458af72e9fc0b0e767.jpg",
+      "/images/anuncios/61c80ea377f6422fa7dcbbf34c23f836.jpg",
+      "/images/anuncios/971156dfa70740a59a3f973ae228de51.jpg"
+    ]
+  },
+  {
+    "id": "martes-de-tentacion-en-carino-spadate-un-dia-y-dejate-consentir-con-masajes-relajantes",
+    "slug": "martes-de-tentacion-en-carino-spadate-un-dia-y-dejate-consentir-con-masajes-relajantes",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/hoy-vive-una-experiencia-unica-en-noviembre-en-carino-spa-bo600fshz/",
+    "city": "Santa Cruz",
+    "title": "Martes de tentacion en carino spadate un dia y dejate consentir con masajes relajantes",
+    "anuncio": "Un día para dejar el estrés afuera y darle un premio a tus sentidos en un ambiente cómodo con aire acondicionado donde nuestras manos conducirán tus sentidos al máximo placerSolo en CARIÑO SPA tenemos lo que tu cuerpo necesita pide el catalogo y ven a sentir masajes inspirados en ti RESERVA Y DEJATE CONSENTIR",
+    "whatsapp": "77426965",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/2a9a41785f8349e8b9cbf7544729cd0b.jpg",
+      "/images/anuncios/a25fa762f51c41dba28f2e3dc42848df.jpg",
+      "/images/anuncios/d6acd56f80e545a695c56cb0562c3812.jpg",
+      "/images/anuncios/0b0f3d89e321470b94b7d42aad25ef46.jpg",
+      "/images/anuncios/685e38b12a314f89ae8231acd4bd7293.jpg",
+      "/images/anuncios/9c18ed9e2395474b8adcb252224f988e.jpg",
+      "/images/anuncios/a30b5f767c24432aa6247578892015ab.jpg",
+      "/images/anuncios/aa8fe4bc2139424eac18c4c5e47415e1.jpg"
+    ]
+  },
+  {
+    "id": "iniciante-hermosa-blanquita-muy-carinosa-sensual-y-carismatica-ago-trio-con-m-amiga-full-chupadita-s",
+    "slug": "iniciante-hermosa-blanquita-muy-carinosa-sensual-y-carismatica-ago-trio-con-m-amiga-full-chupadita-s",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/iniciante-hermosa-blanquita-muy-carinosa-sensual-y-carismatica-ago-trio-con-m-amiga-full-chupadita-s-bo76qfqbc/",
+    "city": "Santa Cruz",
+    "title": "Iniciante hermosa blanquita muy carinosa sensual y carismatica ago trio con m amiga full chupadita sin condon",
+    "anuncio": "Anal profundo muy mamácita sexi y cariñosa muy bella trío 2x1 loq pidas tu bebesito hermoso muy cariñosas y sensuales",
+    "whatsapp": "69772864",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/4e07b05b85b44632834a9053361cf1cf.jpg",
+      "/images/anuncios/329faa160c8c44258cb8337df018e146.jpg",
+      "/images/anuncios/724655bbe54d40b88791dce0435abfe0.jpg",
+      "/images/anuncios/a34bbe6f3789460ba80f9185e02ca2db.jpg",
+      "/images/anuncios/ed2a32a899e440ceb14e7f5f6a9d343b.jpg",
+      "/images/anuncios/0636086a0a774e888f8ef47e57e60d12.jpg",
+      "/images/anuncios/8e1c6cb97f2a4e52b4dc91826f1d0fdf.jpg",
+      "/images/anuncios/f5aa9bfb9e274be790d683d0fbc93e7a.jpg",
+      "/images/anuncios/26375eac91674e6fa858c555c8407c59.jpg",
+      "/images/anuncios/4e07b05b85b44632834a9053361cf1cf.jpg",
+      "/images/anuncios/329faa160c8c44258cb8337df018e146.jpg"
+    ]
+  },
+  {
+    "id": "linda-beniana-madurita-alta-calidad",
+    "slug": "linda-beniana-madurita-alta-calidad",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/linda-beniana-madurita-alta-calidad-bo3a26phf/",
+    "city": "Santa Cruz",
+    "title": "Linda beniana madurita alta calidad",
+    "anuncio": "Me llamo Jimena macanudita independiente cariñosa juguetona amable atención solo de dia llámame cuando puedas",
+    "whatsapp": "67820814",
+    "precio": 250,
+    "fotos": [
+      "/images/anuncios/84b4eac2d97e4115bea06b23651e8262.jpg"
+    ]
+  },
+  {
+    "id": "madura-tetona-fogosa-sin-limite-sexo-con-becitos-todo-natural-muy-calentona-carinosa-din-apuros",
+    "slug": "madura-tetona-fogosa-sin-limite-sexo-con-becitos-todo-natural-muy-calentona-carinosa-din-apuros",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/madura-tetona-con-muchas-ganas-de-placer-mutuo-natural-oral-sin-limite-hoy-as-tu-cita-bo0r5nj7j/",
+    "city": "Santa Cruz",
+    "title": "MADURA TETONA FOGOSA SIN LIMITE Sexo CON BECITOS TODO NATURAL MUY CALENTONA carinosa din apuros",
+    "anuncio": "Madura tetona muy arrecha con muchas ganas de pasarla súper rico sexo full frotación toques metidas sin limite de sexo hoy te espero con muchas ganas mi rey te encantara mucho sexo compañía de una madura super caliente con trato de novio ya disponible para un buen mañanero",
+    "whatsapp": "62602199",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/395bfd2cab0c4456848977c307eb617c.jpg",
+      "/images/anuncios/893d71b2d9eb42da8d9015c37747c4eb.jpg",
+      "/images/anuncios/2e7b30e7c71b471599f35a875036cfb7.jpg",
+      "/images/anuncios/aecc2f39a1d548d985d9bf13695fdfa7.jpg",
+      "/images/anuncios/bf9bc0d59153454eb5de89766ec0f9ee.jpg"
+    ]
+  },
+  {
+    "id": "nueva-en-el-ambiente-promo-de-100bs-media-hora-relaciones-ilimitada-solo-x-hoy",
+    "slug": "nueva-en-el-ambiente-promo-de-100bs-media-hora-relaciones-ilimitada-solo-x-hoy",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/promo-de-100bs-media-hora-relaciones-ilimitada-solo-x-hoy-bo32659d9/",
+    "city": "Santa Cruz",
+    "title": "Nueva en el ambiente promo de 100bs media hora relaciones ilimitada solo x hoy",
+    "anuncio": "Isa promo de 100bs media hora más relaciones ilimitadas solo x hoy bb macanuda blancona 150bs una hora 10minutos más relaciones ilimitadas 100bs media hora más relaciones ilimitadas ORAL CON PROTECCIÓN VAGINAL CON PROTECCIÓN DESNUDO TOTAL POSES A ELECCIÓN no hago anal no hago salidas se cancela 20bs el ingreso ATENCION HASTA LAS 9 Y MEDIA DE LA NOCHE",
+    "whatsapp": "64462310",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/53fe339aae1d4e8ba905111f7e6ce815.jpg"
+    ]
+  },
+  {
+    "id": "senorita-macanuda-de-cola-grande-sexy-educada-y-extrovertida-independiente-con-ambiente-propio-con-a",
+    "slug": "senorita-macanuda-de-cola-grande-sexy-educada-y-extrovertida-independiente-con-ambiente-propio-con-a",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/senorita-macanuda-de-cola-grande-independiente-de-buena-presencia-con-ambiente-propio-y-discreto-bo57heqee/",
+    "city": "Santa Cruz",
+    "title": "Senorita macanuda de cola grande sexy educada y extrovertida independiente con ambiente propio con aire acondicionado y",
+    "anuncio": "amor soy una señorita de cola grande sexy de piel suave pechos firmes y de sonrisa encantadora Te ofrezco un ambiente limpio con aire acondicionado y muy discreto además de realizarte un rico oral profundo también te ofrezco una compañía muy amena y de calidad Atiendo en mi departamento y realizo salidas a donde sea que te encuentres",
+    "whatsapp": "69287540",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/55f0fc53518241c388f09433a4d9c8bb.jpg",
+      "/images/anuncios/bb4fa9e2ade34bc39e78cda0fb8f1fe7.jpg"
+    ]
+  },
+  {
+    "id": "universitaria-cachonda-con-departamento-independiente-y-lujoso",
+    "slug": "universitaria-cachonda-con-departamento-independiente-y-lujoso",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/universitaria-cachonda-con-departamento-independiente-y-lujoso-bo7t3ksm0/",
+    "city": "Santa Cruz",
+    "title": "Universitaria cachonda con departamento independiente y lujoso",
+    "anuncio": "Universitaria hermosa sexy y cachonda dispuesta a satisfacer todos tus deseos cuento con departamento discreto y lujoso por la zona de equipetrol",
+    "whatsapp": "76674549",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/85a76067a9f041a7842ad58dc645440c.jpg",
+      "/images/anuncios/2d47647193604b2589d8dd507d0c0e75.jpg",
+      "/images/anuncios/76bbc6b0e3da4fd0a9312d7fa1f5a830.jpg"
+    ]
+  },
+  {
+    "id": "vaginal-oral-frotasion-piel-a-piel-full-chupadita-sin-condon-garganta-profunda-uy-bella-sexi-y-carin",
+    "slug": "vaginal-oral-frotasion-piel-a-piel-full-chupadita-sin-condon-garganta-profunda-uy-bella-sexi-y-carin",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/vaginal-oral-frotasion-piel-a-piel-full-chupadita-sin-condon-garganta-profunda-uy-bella-sexi-y-carin-bo7sbrlok/",
+    "city": "Santa Cruz",
+    "title": "Vaginal oral frotasion piel a piel full chupadita sin condon garganta profunda uy bella sexi y carinosa",
+    "anuncio": "Tu diablita traviesa soy masoquista amor ven a darme duro hacerme sentir cosas ricas m amorcito las posees q desees al desnudo total",
+    "whatsapp": "75597732",
+    "precio": null,
+    "fotos": [
+      "/images/anuncios/ed2a32a899e440ceb14e7f5f6a9d343b.jpg",
+      "/images/anuncios/7d66ce5e84c042d5a6e71cbdb27b74fb.jpg",
+      "/images/anuncios/0636086a0a774e888f8ef47e57e60d12.jpg",
+      "/images/anuncios/a1ede284c0244ef2a6a4dd74fd09b965.jpg",
+      "/images/anuncios/0de448dfdda74c79b31df9e48d7a8e9c.jpg",
+      "/images/anuncios/75fccc3b2284470290a94c94eca59fb1.jpg",
+      "/images/anuncios/54b860a8629a45309299fdf39fcb646a.jpg"
+    ]
+  },
+  {
+    "id": "nuevita",
+    "slug": "nuevita",
+    "date": "10-03-2026",
+    "link": "https://bo.skokka.com/anuncio/veronica-18-anitos-bo99f88mj/",
+    "city": "Santa Cruz",
+    "title": "Nuevita",
+    "anuncio": "Soy Verónica con 18 años de frescura y pasión Soy nueva en esto me dejaré guiar y explorar contigo todas las poses Te haré sentir como mi novio Ofrezco servicios orales y vaginales siempre con preservativo Tengo mi propio lugar cómodo y discreto con un ingreso de 20 bs Más información al privado",
+    "whatsapp": "77896740",
+    "precio": 200,
+    "fotos": [
+      "/images/anuncios/613140c201724e75b7c59bc545bed173.jpg"
+    ]
+  },
   {
     "id": "inocente-delgadita-alta-muy-bonita-de-rosto-y-de-cuerpo-deseable-con-buenos-atributos",
     "slug": "inocente-delgadita-alta-muy-bonita-de-rosto-y-de-cuerpo-deseable-con-buenos-atributos",
@@ -9292,48 +10411,6 @@ export const anunciosData: Anuncio[] = [
     ]
   },
   {
-    "id": "ven-escapate-de-tu-rutina-diaria-estoy-disponible-todo-el-tiempo-carino-en-mi-encontraras-placerrr-s",
-    "slug": "ven-escapate-de-tu-rutina-diaria-estoy-disponible-todo-el-tiempo-carino-en-mi-encontraras-placerrr-s",
-    "date": "28-02-2026",
-    "link": "https://bo.skokka.com/anuncio/ven-escapate-de-tu-rutina-diaria-estoy-disponible-todo-el-tiempo-carino-en-mi-encontraras-placerrr-s-bo0bieqq4/",
-    "city": "Santa Cruz",
-    "title": "Ven escapate de tu rutina diaria estoy disponible todo el tiempo carino en mi encontraras placerrr sensualidad",
-    "anuncio": "Disfruta de un masaje sensual sexo oral y mucho más privado con total discreción y sin prisas Mis fotos son reales y mi trato es de enamorados con besos y caricias No te arrepentirásSoy una chica con un cuerpo de Diosa y cuando me conozcas no querrás dejarme ir A mi lado vivirás momentos inolvidables Te ofrezco un trato de pareja cordial y totalmente privado",
-    "whatsapp": "",
-    "precio": null,
-    "fotos": [
-      "/images/anuncios/10dcf27369d548059e923fa79a9e02b6.jpg",
-      "/images/anuncios/a59bbce767e549a4a80031982f545d4a.jpg",
-      "/images/anuncios/f495461a1e4247908d0e7471b4cba930.jpg",
-      "/images/anuncios/e748ae999c9242e2af2a907f17a58629.jpg",
-      "/images/anuncios/2f7986ebe641465d8c3f2fc466986212.jpg",
-      "/images/anuncios/8adb60e81b25453bb6c00e57a022dc0b.jpg"
-    ]
-  },
-  {
-    "id": "100bs-full-anal-y-oral-al-natural-sin-apuros-desnuda-total-tetona-ardiente-traga-lechecita-complacie",
-    "slug": "100bs-full-anal-y-oral-al-natural-sin-apuros-desnuda-total-tetona-ardiente-traga-lechecita-complacie",
-    "date": "28-02-2026",
-    "link": "https://bo.skokka.com/anuncio/100bs-full-anal-y-oral-al-natural-sin-apuros-desnuda-total-tetona-ardiente-traga-lechecita-complacie-bo01jc61o/",
-    "city": "Cochabamba",
-    "title": "100bs FULL ANAL Y ORAL AL NATURAL SIN APUROS DESNUDA TOTAL TETONA ARDIENTE TRAGA LECHECITA COMPLACIENTE",
-    "anuncio": "Hola amor Soy la AYLEEN Exquisita lo que estás buscando coqueta sensual amorosaComplaciente adicta Al Sexo Figura espectacular piel sensual y delicada Exitantes Cuento con ambiente propio para disfrutar a lo máximo TAMBIÉN TE PUEDO OFRECER VIDEOS LLAMADAS O VENTA DE PACK DE VIDEOS NOPOR AMETEURS EXQUISITOS MÍOS XXX SI DESEAS AMOR PREGUNTA Y TE DOY MAS INFORMACIÓN",
-    "whatsapp": "",
-    "precio": null,
-    "fotos": [
-      "/images/anuncios/f1d3e33e19594958b136d340e83f0457.jpg",
-      "/images/anuncios/ff4f0307b2cf44e4ab15a88572944f4d.jpg",
-      "/images/anuncios/458fa12c48dc44c7a4a2b6e222910be2.jpg",
-      "/images/anuncios/436622bc08d746d58e8f1d4432d6d0b0.jpg",
-      "/images/anuncios/21b030b29e084d65aacf8aa9184c3820.jpg",
-      "/images/anuncios/36411aa73c1348629bbdc3b79e3d8e4a.jpg",
-      "/images/anuncios/be19ab5268cc45c8877d98f0ef82d2a9.jpg",
-      "/images/anuncios/d7d7056c88dd4121b0ac1bc721a187f1.jpg",
-      "/images/anuncios/7a14c6b4cca74abcb1493d8a84577d44.jpg",
-      "/images/anuncios/7110ad4295304467bd96183f527e7055.jpg"
-    ]
-  },
-  {
     "id": "100momenti-con-poses-oral-flora-cholita-gordita-madura",
     "slug": "100momenti-con-poses-oral-flora-cholita-gordita-madura",
     "date": "28-02-2026",
@@ -10095,23 +11172,6 @@ export const anunciosData: Anuncio[] = [
       "/images/anuncios/2fcb60017ff84eaf84fdd89ca4723560.jpg",
       "/images/anuncios/026ff88c6a324fe5a9c72470c9e40205.jpg",
       "/images/anuncios/bde9396b73514702a8cd6f252a6017a1.jpg"
-    ]
-  },
-  {
-    "id": "oral-sin-condon-papi-hasta-dejartela-bien-durita-el-tiempo-que-gustes",
-    "slug": "oral-sin-condon-papi-hasta-dejartela-bien-durita-el-tiempo-que-gustes",
-    "date": "28-02-2026",
-    "link": "https://bo.skokka.com/anuncio/esther-bbte-hago-oral-sin-condon-amor-te-la-chupo-hasta-dejarte-la-bien-durita-sin-limites-y-anal-in-bo3mbh9qu/",
-    "city": "Santa Cruz",
-    "title": "Oral sin condon papi hasta dejartela bien durita el tiempo que gustes",
-    "anuncio": "Realizo solo salidas amor Domicilio Alojamientos Residencial Motel Hotel SOLO MANDAS TU UBICACIÓN AMOR Y YO VOY HASTA DONDE ESTES NO TENGO AMBIENTE NI PUNTO FIJO Soy carismática te atiendo sin apuros me gusta disfrutar el momento OJO NO SOY FLACA SOY CUERPUDITA CON CURVAS",
-    "whatsapp": "",
-    "precio": null,
-    "fotos": [
-      "/images/anuncios/8257a311f7cd4d4db17ff516f1ce4581.jpg",
-      "/images/anuncios/853cd70817054b69b3e75d6799b6d82c.jpg",
-      "/images/anuncios/0c3c0048a66e4f4086654a9b64eddfe7.jpg",
-      "/images/anuncios/c3ff147f93614d71a1ba2fc48b50fb63.jpg"
     ]
   },
   {
@@ -18505,34 +19565,6 @@ export const anunciosData: Anuncio[] = [
     "slug": "tu-nina-bonita-top-premiumde-18-anos-trato-de-enamorados"
   },
   {
-    "id": "candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo",
-    "date": "09-11-2025",
-    "link": "https://bo.skokka.com/anuncio/candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo-bo0kw7lin/",
-    "city": "Cochabamba",
-    "title": "CANDY Y MELANYTRIOSSIN CONDONJOVENCITAS ARRECHITASOFERTON 100bs 80bsANAL PROFUNDO",
-    "anuncio": "CANDY Y MELANYLAS DIOSAS DEL SEXO DURO Y SALVAJEme encuentro por la AROMA Y ESTEBAN ARCE cuento con habitación independiente con full aire acondicionado limpio discreto Hago SIN CONDÓN 50 Bs x 15 min 80 Bs x 20 min 100 Bs x 30 min 150 Bs x 1hrs de relaciones sin límites lo hacemos Foto en el Perfil 100 real nada falso TRÍOS FULL ANAL ACEPTO PAGOS POR QR Y AFECTIVO",
-    "whatsapp": "69538881",
-    "precio": null,
-    "fotos": [
-      "/images/anuncios/ebba08adef324efcbc0d048f61b0dd55.jpg",
-      "/images/anuncios/c36ead2a5efc4d3cba58e5676141a7f2.jpg",
-      "/images/anuncios/b91d33e020a847efb7fa2c374d5dbe37.jpg",
-      "/images/anuncios/15a881aad99046db9d76eb61bb8b0218.jpg",
-      "/images/anuncios/f8ba394eb27d4d53b4417dbe217e8e34.jpg",
-      "/images/anuncios/10b4a8464f6545b1a1635329a95d54c4.jpg"
-    ],
-    "edad": 22,
-    "servicios": [
-      "Encuentros",
-      "Citas"
-    ],
-    "ubicacion": "Centro",
-    "disponibilidad": "Fines de semana",
-    "verificado": false,
-    "vistas": 1504,
-    "slug": "candy-y-melanytriossin-condonjovencitas-arrechitasoferton-100bs-80bsanal-profundo"
-  },
-  {
     "id": "cholita-madura-macanuda-solterita-full-estilito",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/cholita-madura-macanuda-solterita-full-estilito-bo1cpnrlz/",
@@ -20675,29 +21707,6 @@ export const anunciosData: Anuncio[] = [
     "slug": "morena-linda-delgada-hago-de-todo-y-soy-muy-sociable"
   },
   {
-    "id": "nicky-iniciante",
-    "date": "09-11-2025",
-    "link": "https://bo.skokka.com/anuncio/nicky-iniciante-bo0xg20qc/",
-    "city": "Santa Cruz",
-    "title": "Nicky iniciante",
-    "anuncio": "Hola mi amor Soy Nicky y iniciante Tengo 21 años y soy muy complaciente y muy cariñosa Escribime al WhatsApp y te mando mas información y fotos",
-    "whatsapp": "74275206",
-    "precio": null,
-    "fotos": [
-      "/images/anuncios/62bad2139298484781c8e23c0b846351.jpg"
-    ],
-    "edad": 20,
-    "servicios": [
-      "Encuentros",
-      "Eventos"
-    ],
-    "ubicacion": "Calacoto",
-    "disponibilidad": "Fines de semana",
-    "verificado": false,
-    "vistas": 1013,
-    "slug": "nicky-iniciante"
-  },
-  {
     "id": "para-hombres-solventes",
     "date": "09-11-2025",
     "link": "https://bo.skokka.com/anuncio/para-hombres-solventes-bo0tv8pw9/",
@@ -21668,32 +22677,35 @@ export const anunciosData: Anuncio[] = [
     "vistas": 1293,
     "slug": "el-mejor-club-privado-en-cuenta-con-las-diosas-bellas-damitas-a-eleccion-del-cliente-macanudas-altas"
   }
-]
+];
 
 // Helper function to find anuncio by ID (deprecated - use getAnuncioBySlug)
 export function getAnuncioById(id: string): Anuncio | undefined {
-  return anunciosData.find(a => a.id === id)
+  return anunciosData.find((a) => a.id === id);
 }
 
 // Helper function to find anuncio by slug (preferred)
 export function getAnuncioBySlug(slug: string): Anuncio | undefined {
-  return anunciosData.find(a => a.slug === slug)
+  return anunciosData.find((a) => a.slug === slug);
 }
 
 // Helper function to get anuncios by city
 export function getAnunciosByCity(city: string): Anuncio[] {
-  return anunciosData.filter(a => a.city === city)
+  return anunciosData.filter((a) => a.city === city);
 }
 
 // Get all unique cities
 export function getCities(): string[] {
-  return [...new Set(anunciosData.map(a => a.city))].sort()
+  return [...new Set(anunciosData.map((a) => a.city))].sort();
 }
 
 // Get anuncios count by city
 export function getAnunciosCountByCity(): Record<string, number> {
-  return anunciosData.reduce((acc, a) => {
-    acc[a.city] = (acc[a.city] || 0) + 1
-    return acc
-  }, {} as Record<string, number>)
+  return anunciosData.reduce(
+    (acc, a) => {
+      acc[a.city] = (acc[a.city] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 }
